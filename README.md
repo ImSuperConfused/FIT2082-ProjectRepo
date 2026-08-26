@@ -1,4 +1,6 @@
 # FIT2082 - Project Repository
+## Project Description
 Vulnerability scanners typically return long, unranked lists of findings, making it hard to know what to fix first. In this project the student will run an existing scanner (such as OWASP ZAP) against a deliberately vulnerable practice application (e.g., OWASP Juice Shop or DVWA) and build a small Python script that reads the scanner's report and sorts the findings by severity using their CVSS scores. The expected outcome is a lightweight tool plus a short report showing a before/after prioritised list of vulnerabilities for the test application.
 
+## Project Timeline
 ![Project Timeline](Dump/ProjectTimeline.png)

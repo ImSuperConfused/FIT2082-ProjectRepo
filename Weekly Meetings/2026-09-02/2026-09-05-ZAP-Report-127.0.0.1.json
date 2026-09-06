@@ -1,0 +1,749 @@
+{
+	"@programName": "ZAP",
+	"@version": "2.17.0",
+	"@generated": "Sat, 5 Sep 2026 23:52:30",
+	"created": "2026-09-06T03:52:30.724388179Z",
+	"insights":[
+		{
+			"level": "Low",
+			"reason": "Warning",
+			"site": "",
+			"key": "insight.log.warn",
+			"description": "ZAP warnings logged - see the zap.log file for details",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://127.0.0.1",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "78"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://127.0.0.1",
+			"key": "insight.code.3xx",
+			"description": "Percentage of responses with status code 3xx",
+			"statistic": "17"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://127.0.0.1",
+			"key": "insight.code.4xx",
+			"description": "Percentage of responses with status code 4xx",
+			"statistic": "4"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://127.0.0.1",
+			"key": "insight.endpoint.ctype.application/javascript",
+			"description": "Percentage of endpoints with content type application/javascript",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://127.0.0.1",
+			"key": "insight.endpoint.ctype.application/pdf",
+			"description": "Percentage of endpoints with content type application/pdf",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://127.0.0.1",
+			"key": "insight.endpoint.ctype.image/gif",
+			"description": "Percentage of endpoints with content type image/gif",
+			"statistic": "6"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://127.0.0.1",
+			"key": "insight.endpoint.ctype.image/png",
+			"description": "Percentage of endpoints with content type image/png",
+			"statistic": "6"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://127.0.0.1",
+			"key": "insight.endpoint.ctype.image/vnd.microsoft.icon",
+			"description": "Percentage of endpoints with content type image/vnd.microsoft.icon",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://127.0.0.1",
+			"key": "insight.endpoint.ctype.text/css",
+			"description": "Percentage of endpoints with content type text/css",
+			"statistic": "3"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://127.0.0.1",
+			"key": "insight.endpoint.ctype.text/html",
+			"description": "Percentage of endpoints with content type text/html",
+			"statistic": "78"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://127.0.0.1",
+			"key": "insight.endpoint.ctype.text/plain",
+			"description": "Percentage of endpoints with content type text/plain",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://127.0.0.1",
+			"key": "insight.endpoint.method.GET",
+			"description": "Percentage of endpoints with method GET",
+			"statistic": "98"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://127.0.0.1",
+			"key": "insight.endpoint.method.POST",
+			"description": "Percentage of endpoints with method POST",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://127.0.0.1",
+			"key": "insight.endpoint.total",
+			"description": "Count of total endpoints",
+			"statistic": "105"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://127.0.0.1",
+			"key": "insight.response.slow",
+			"description": "Percentage of slow responses",
+			"statistic": "2"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.google.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.google.com",
+			"key": "insight.endpoint.ctype.text/javascript",
+			"description": "Percentage of endpoints with content type text/javascript",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.google.com",
+			"key": "insight.endpoint.method.GET",
+			"description": "Percentage of endpoints with method GET",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.google.com",
+			"key": "insight.endpoint.total",
+			"description": "Count of total endpoints",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.google.com",
+			"key": "insight.response.slow",
+			"description": "Percentage of slow responses",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.gstatic.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.gstatic.com",
+			"key": "insight.endpoint.ctype.text/javascript",
+			"description": "Percentage of endpoints with content type text/javascript",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.gstatic.com",
+			"key": "insight.endpoint.method.GET",
+			"description": "Percentage of endpoints with method GET",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.gstatic.com",
+			"key": "insight.endpoint.total",
+			"description": "Count of total endpoints",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.gstatic.com",
+			"key": "insight.response.slow",
+			"description": "Percentage of slow responses",
+			"statistic": "100"
+		}
+	],
+	"site":[ 
+		{
+			"@name": "http://127.0.0.1",
+			"@host": "127.0.0.1",
+			"@port": "80",
+			"@ssl": "false",
+			"alerts": [ 
+				{
+					"pluginid": "6",
+					"alertRef": "6-2",
+					"alert": "Path Traversal",
+					"name": "Path Traversal",
+					"riskcode": "3",
+					"confidence": "2",
+					"riskdesc": "High (Medium)",
+					"desc": "<p>The Path Traversal attack technique allows an attacker access to files, directories, and commands that potentially reside outside the web document root directory. An attacker may manipulate a URL in such a way that the web site will execute or reveal the contents of arbitrary files anywhere on the web server. Any device that exposes an HTTP-based interface is potentially vulnerable to Path Traversal.</p><p></p><p>Most web sites restrict user access to a specific portion of the file-system, typically called the \"web document root\" or \"CGI root\" directory. These directories contain the files intended for user access and the executable necessary to drive web application functionality. To access files or execute commands anywhere on the file-system, Path Traversal attacks will utilize the ability of special-characters sequences.</p><p></p><p>The most basic Path Traversal attack uses the \"../\" special-character sequence to alter the resource location requested in the URL. Although most popular web servers will prevent this technique from escaping the web document root, alternate encodings of the \"../\" sequence may help bypass the security filters. These method variations include valid and invalid Unicode-encoding (\"..%u2216\" or \"..%c0%af\") of the forward slash character, backslash characters (\"..\\\") on Windows-based servers, URL encoded characters \"%2e%2e%2f\"), and double URL encoding (\"..%255c\") of the backslash character.</p><p></p><p>Even if the web server properly restricts Path Traversal attempts in the URL path, a web application itself may still be vulnerable due to improper handling of user-supplied input. This is a common problem of web applications that use template mechanisms or load static text from files. In variations of the attack, the original URL parameter value is substituted with the file name of one of the web application's dynamic scripts. Consequently, the results can reveal source code because the file is interpreted as text instead of an executable script. These techniques often employ additional special characters such as the dot (\".\") to reveal the listing of the current working directory, or \"%00\" NULL characters in order to bypass rudimentary file extension checks.</p>",
+					"instances":[ 
+						{
+							"id": "1375",
+							"uri": "http://127.0.0.1/vulnerabilities/fi/?page=%2Fetc%2Fpasswd",
+							"nodeName": "http:\/\/127.0.0.1\/vulnerabilities\/fi\/ (page)",
+							"method": "GET",
+							"param": "page",
+							"attack": "/etc/passwd",
+							"evidence": "root:x:0:0",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>Assume all input is malicious. Use an \"accept known good\" input validation strategy, i.e., use an allow list of acceptable inputs that strictly conform to specifications. Reject any input that does not strictly conform to specifications, or transform it into something that does. Do not rely exclusively on looking for malicious or malformed inputs (i.e., do not rely on a deny list). However, deny lists can be useful for detecting potential attacks or determining which inputs are so malformed that they should be rejected outright.</p><p></p><p>When performing input validation, consider all potentially relevant properties, including length, type of input, the full range of acceptable values, missing or extra inputs, syntax, consistency across related fields, and conformance to business rules. As an example of business rule logic, \"boat\" may be syntactically valid because it only contains alphanumeric characters, but it is not valid if you are expecting colors such as \"red\" or \"blue.\"</p><p></p><p>For filenames, use stringent allow lists that limit the character set to be used. If feasible, only allow a single \".\" character in the filename to avoid weaknesses, and exclude directory separators such as \"/\". Use an allow list of allowable file extensions.</p><p></p><p>Warning: if you attempt to cleanse your data, then do so that the end result is not in the form that can be dangerous. A sanitizing mechanism can remove characters such as '.' and ';' which may be required for some exploits. An attacker can try to fool the sanitizing mechanism into \"cleaning\" data into a dangerous form. Suppose the attacker injects a '.' inside a filename (e.g. \"sensi.tiveFile\") and the sanitizing mechanism removes the character resulting in the valid filename, \"sensitiveFile\". If the input data are now assumed to be safe, then the file may be compromised. </p><p></p><p>Inputs should be decoded and canonicalized to the application's current internal representation before being validated. Make sure that your application does not decode the same input twice. Such errors could be used to bypass allow list schemes by introducing dangerous inputs after they have been checked.</p><p></p><p>Use a built-in path canonicalization function (such as realpath() in C) that produces the canonical version of the pathname, which effectively removes \"..\" sequences and symbolic links.</p><p></p><p>Run your code using the lowest privileges that are required to accomplish the necessary tasks. If possible, create isolated accounts with limited privileges that are only used for a single task. That way, a successful attack will not immediately give the attacker access to the rest of the software or its environment. For example, database applications rarely need to run as the database administrator, especially in day-to-day operations.</p><p></p><p>When the set of acceptable objects, such as filenames or URLs, is limited or known, create a mapping from a set of fixed input values (such as numeric IDs) to the actual filenames or URLs, and reject all other inputs.</p><p></p><p>Run your code in a \"jail\" or similar sandbox environment that enforces strict boundaries between the process and the operating system. This may effectively restrict which files can be accessed in a particular directory or which commands can be executed by your software.</p><p></p><p>OS-level examples include the Unix chroot jail, AppArmor, and SELinux. In general, managed code may provide some protection. For example, java.io.FilePermission in the Java SecurityManager allows you to specify restrictions on file operations.</p><p></p><p>This may not be a feasible solution, and it only limits the impact to the operating system; the rest of your application may still be subject to compromise.</p><p></p>",
+					"otherinfo": "",
+					"reference": "<p>https://owasp.org/www-community/attacks/Path_Traversal</p><p>https://cwe.mitre.org/data/definitions/22.html</p>",
+					"cweid": "22",
+					"wascid": "33",
+					"sourceid": "3039"
+				},
+				{
+					"pluginid": "40018",
+					"alertRef": "40018",
+					"alert": "SQL Injection",
+					"name": "SQL Injection",
+					"riskcode": "3",
+					"confidence": "2",
+					"riskdesc": "High (Medium)",
+					"desc": "<p>SQL injection may be possible.</p>",
+					"instances":[ 
+						{
+							"id": "1376",
+							"uri": "http://127.0.0.1/setup.php",
+							"nodeName": "http:\/\/127.0.0.1\/setup.php ()(create_db,user_token)",
+							"method": "POST",
+							"param": "create_db",
+							"attack": "Create / Reset Database\" AND \"1\"=\"1",
+							"evidence": "",
+							"otherinfo": "The page results were successfully manipulated using the boolean conditions [Create / Reset Database\" AND \"1\"=\"1] and [Create / Reset Database\" AND \"1\"=\"2]\nThe parameter value being modified was stripped from the HTML output for the purposes of the comparison.\nData was returned for the original parameter.\nThe vulnerability was detected by successfully restricting the data originally returned, by manipulating the parameter."
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>Do not trust client side input, even if there is client side validation in place.</p><p>In general, type check all data on the server side.</p><p>If the application uses JDBC, use PreparedStatement or CallableStatement, with parameters passed by '?'</p><p>If the application uses ASP, use ADO Command Objects with strong type checking and parameterized queries.</p><p>If database Stored Procedures can be used, use them.</p><p>Do *not* concatenate strings into queries in the stored procedure, or use 'exec', 'exec immediate', or equivalent functionality!</p><p>Do not create dynamic SQL queries using simple string concatenation.</p><p>Escape all data received from the client.</p><p>Apply an 'allow list' of allowed characters, or a 'deny list' of disallowed characters in user input.</p><p>Apply the principle of least privilege by using the least privileged database user possible.</p><p>In particular, avoid using the 'sa' or 'db-owner' database users. This does not eliminate SQL injection, but minimizes its impact.</p><p>Grant the minimum database access that is necessary for the application.</p>",
+					"otherinfo": "<p>The page results were successfully manipulated using the boolean conditions [Create / Reset Database\" AND \"1\"=\"1] and [Create / Reset Database\" AND \"1\"=\"2]</p><p>The parameter value being modified was stripped from the HTML output for the purposes of the comparison.</p><p>Data was returned for the original parameter.</p><p>The vulnerability was detected by successfully restricting the data originally returned, by manipulating the parameter.</p>",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html</p>",
+					"cweid": "89",
+					"wascid": "19",
+					"sourceid": "4067"
+				},
+				{
+					"pluginid": "90022",
+					"alertRef": "90022",
+					"alert": "Application Error Disclosure",
+					"name": "Application Error Disclosure",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>This page contains an error/warning message that may disclose sensitive information like the location of the file that produced the unhandled exception. This information can be used to launch further attacks against the web application. The alert could be a false positive if the error message is found inside a documentation page.</p>",
+					"instances":[ 
+						{
+							"id": "784",
+							"uri": "http://127.0.0.1/docs/",
+							"nodeName": "http:\/\/127.0.0.1\/docs\/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Parent Directory",
+							"otherinfo": ""
+						},
+						{
+							"id": "882",
+							"uri": "http://127.0.0.1/docs/?C=N;O=D",
+							"nodeName": "http:\/\/127.0.0.1\/docs\/ (C)",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Parent Directory",
+							"otherinfo": ""
+						},
+						{
+							"id": "773",
+							"uri": "http://127.0.0.1/dvwa/",
+							"nodeName": "http:\/\/127.0.0.1\/dvwa\/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Parent Directory",
+							"otherinfo": ""
+						},
+						{
+							"id": "778",
+							"uri": "http://127.0.0.1/dvwa/?C=D;O=D",
+							"nodeName": "http:\/\/127.0.0.1\/dvwa\/ (C)",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Parent Directory",
+							"otherinfo": ""
+						},
+						{
+							"id": "799",
+							"uri": "http://127.0.0.1/dvwa/css/",
+							"nodeName": "http:\/\/127.0.0.1\/dvwa\/css\/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Parent Directory",
+							"otherinfo": ""
+						},
+						{
+							"id": "832",
+							"uri": "http://127.0.0.1/dvwa/css/?C=D;O=D",
+							"nodeName": "http:\/\/127.0.0.1\/dvwa\/css\/ (C)",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Parent Directory",
+							"otherinfo": ""
+						},
+						{
+							"id": "853",
+							"uri": "http://127.0.0.1/dvwa/images/",
+							"nodeName": "http:\/\/127.0.0.1\/dvwa\/images\/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Parent Directory",
+							"otherinfo": ""
+						},
+						{
+							"id": "974",
+							"uri": "http://127.0.0.1/dvwa/images/?C=D;O=D",
+							"nodeName": "http:\/\/127.0.0.1\/dvwa\/images\/ (C)",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Parent Directory",
+							"otherinfo": ""
+						},
+						{
+							"id": "840",
+							"uri": "http://127.0.0.1/dvwa/includes/",
+							"nodeName": "http:\/\/127.0.0.1\/dvwa\/includes\/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Parent Directory",
+							"otherinfo": ""
+						},
+						{
+							"id": "988",
+							"uri": "http://127.0.0.1/dvwa/includes/?C=N;O=A",
+							"nodeName": "http:\/\/127.0.0.1\/dvwa\/includes\/ (C)",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Parent Directory",
+							"otherinfo": ""
+						},
+						{
+							"id": "1014",
+							"uri": "http://127.0.0.1/dvwa/includes/DBMS/",
+							"nodeName": "http:\/\/127.0.0.1\/dvwa\/includes\/DBMS\/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Parent Directory",
+							"otherinfo": ""
+						},
+						{
+							"id": "997",
+							"uri": "http://127.0.0.1/dvwa/includes/DBMS/?C=S;O=D",
+							"nodeName": "http:\/\/127.0.0.1\/dvwa\/includes\/DBMS\/ (C)",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Parent Directory",
+							"otherinfo": ""
+						},
+						{
+							"id": "848",
+							"uri": "http://127.0.0.1/dvwa/js/",
+							"nodeName": "http:\/\/127.0.0.1\/dvwa\/js\/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Parent Directory",
+							"otherinfo": ""
+						},
+						{
+							"id": "1020",
+							"uri": "http://127.0.0.1/dvwa/js/?C=N;O=D",
+							"nodeName": "http:\/\/127.0.0.1\/dvwa\/js\/ (C)",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Parent Directory",
+							"otherinfo": ""
+						},
+						{
+							"id": "1174",
+							"uri": "http://127.0.0.1/vulnerabilities/",
+							"nodeName": "http:\/\/127.0.0.1\/vulnerabilities\/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Parent Directory",
+							"otherinfo": ""
+						},
+						{
+							"id": "1169",
+							"uri": "http://127.0.0.1/vulnerabilities/?C=S;O=D",
+							"nodeName": "http:\/\/127.0.0.1\/vulnerabilities\/ (C)",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Parent Directory",
+							"otherinfo": ""
+						}
+					],
+					"count": "16",
+					"systemic": false,
+					"solution": "<p>Review the source code of this page. Implement custom error pages. Consider implementing a mechanism to provide a unique error reference/identifier to the client (browser) while logging the details on the server side and not exposing them to the user.</p>",
+					"otherinfo": "",
+					"reference": "",
+					"cweid": "550",
+					"wascid": "13",
+					"sourceid": "2652"
+				},
+				{
+					"pluginid": "90022",
+					"alertRef": "90022",
+					"alert": "Application Error Disclosure",
+					"name": "Application Error Disclosure",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>This page contains an error/warning message that may disclose sensitive information like the location of the file that produced the unhandled exception. This information can be used to launch further attacks against the web application. The alert could be a false positive if the error message is found inside a documentation page.</p>",
+					"instances":[ 
+						{
+							"id": "1003",
+							"uri": "http://127.0.0.1/dvwa/includes/DBMS/MySQL.php",
+							"nodeName": "http:\/\/127.0.0.1\/dvwa\/includes\/DBMS\/MySQL.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HTTP/1.0 500 Internal Server Error",
+							"otherinfo": ""
+						},
+						{
+							"id": "1039",
+							"uri": "http://127.0.0.1/dvwa/includes/DBMS/PGSQL.php",
+							"nodeName": "http:\/\/127.0.0.1\/dvwa\/includes\/DBMS\/PGSQL.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HTTP/1.0 500 Internal Server Error",
+							"otherinfo": ""
+						}
+					],
+					"count": "2",
+					"systemic": false,
+					"solution": "<p>Review the source code of this page. Implement custom error pages. Consider implementing a mechanism to provide a unique error reference/identifier to the client (browser) while logging the details on the server side and not exposing them to the user.</p>",
+					"otherinfo": "",
+					"reference": "",
+					"cweid": "550",
+					"wascid": "13",
+					"sourceid": "2817"
+				},
+				{
+					"pluginid": "10010",
+					"alertRef": "10010",
+					"alert": "Cookie No HttpOnly Flag",
+					"name": "Cookie No HttpOnly Flag",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>A cookie has been set without the HttpOnly flag, which means that the cookie can be accessed by JavaScript. If a malicious script can be run on this page then the cookie will be accessible and can be transmitted to another site. If this is a session cookie then session hijacking may be possible.</p>",
+					"instances":[ 
+						{
+							"id": "743",
+							"uri": "http://127.0.0.1/",
+							"nodeName": "http:\/\/127.0.0.1\/",
+							"method": "GET",
+							"param": "PHPSESSID",
+							"attack": "",
+							"evidence": "Set-Cookie: PHPSESSID",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"systemic": true,
+					"solution": "<p>Ensure that the HttpOnly flag is set for all cookies.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://owasp.org/www-community/HttpOnly</p>",
+					"cweid": "1004",
+					"wascid": "13",
+					"sourceid": "2618"
+				},
+				{
+					"pluginid": "10054",
+					"alertRef": "10054-1",
+					"alert": "Cookie without SameSite Attribute",
+					"name": "Cookie without SameSite Attribute",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.</p>",
+					"instances":[ 
+						{
+							"id": "755",
+							"uri": "http://127.0.0.1",
+							"nodeName": "http:\/\/127.0.0.1",
+							"method": "GET",
+							"param": "PHPSESSID",
+							"attack": "",
+							"evidence": "Set-Cookie: PHPSESSID",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"systemic": true,
+					"solution": "<p>Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-same-site</p>",
+					"cweid": "1275",
+					"wascid": "13",
+					"sourceid": "2615"
+				},
+				{
+					"pluginid": "10009",
+					"alertRef": "10009",
+					"alert": "In Page Banner Information Leak",
+					"name": "In Page Banner Information Leak",
+					"riskcode": "1",
+					"confidence": "3",
+					"riskdesc": "Low (High)",
+					"desc": "<p>The server returned a version banner string in the response content. Such information leaks may allow attackers to further target specific issues impacting the product and version in use.</p>",
+					"instances":[ 
+						{
+							"id": "750",
+							"uri": "http://127.0.0.1/sitemap.xml",
+							"nodeName": "http:\/\/127.0.0.1\/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Apache/2.4.25",
+							"otherinfo": "There is a chance that the highlight in the finding is on a value in the headers, versus the actual matched string in the response body."
+						}
+					],
+					"count": "1",
+					"systemic": true,
+					"solution": "<p>Configure the server to prevent such information leaks. For example:</p><p>Under Tomcat this is done via the \"server\" directive and implementation of custom error pages.</p><p>Under Apache this is done via the \"ServerSignature\" and \"ServerTokens\" directives.</p>",
+					"otherinfo": "<p>There is a chance that the highlight in the finding is on a value in the headers, versus the actual matched string in the response body.</p>",
+					"reference": "<p>https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/</p>",
+					"cweid": "497",
+					"wascid": "13",
+					"sourceid": "2619"
+				},
+				{
+					"pluginid": "10023",
+					"alertRef": "10023",
+					"alert": "Information Disclosure - Debug Error Messages",
+					"name": "Information Disclosure - Debug Error Messages",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The response appeared to contain common error messages returned by platforms such as ASP.NET, and Web-servers such as IIS and Apache. You can configure the list of common debug messages.</p>",
+					"instances":[ 
+						{
+							"id": "804",
+							"uri": "http://127.0.0.1/instructions.php",
+							"nodeName": "http:\/\/127.0.0.1\/instructions.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "PHP warning",
+							"otherinfo": ""
+						},
+						{
+							"id": "954",
+							"uri": "http://127.0.0.1/instructions.php?doc=readme",
+							"nodeName": "http:\/\/127.0.0.1\/instructions.php (doc)",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "PHP warning",
+							"otherinfo": ""
+						}
+					],
+					"count": "2",
+					"systemic": false,
+					"solution": "<p>Disable debugging messages before pushing to production.</p>",
+					"otherinfo": "",
+					"reference": "",
+					"cweid": "1295",
+					"wascid": "13",
+					"sourceid": "2659"
+				},
+				{
+					"pluginid": "10111",
+					"alertRef": "10111",
+					"alert": "Authentication Request Identified",
+					"name": "Authentication Request Identified",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>The given request has been identified as an authentication request. The 'Other Info' field contains a set of key=value lines which identify any relevant fields. If the request is in a context which has an Authentication Method set to \"Auto-Detect\" then this rule will change the authentication to match the request identified.</p>",
+					"instances":[ 
+						{
+							"id": "1117",
+							"uri": "http://127.0.0.1/login.php",
+							"nodeName": "http:\/\/127.0.0.1\/login.php ()(Login,password,user_token,username)",
+							"method": "POST",
+							"param": "Login",
+							"attack": "",
+							"evidence": "password",
+							"otherinfo": "userParam=Login\nuserValue=Login\npasswordParam=password\nreferer=http://127.0.0.1/login.php\ncsrfToken=user_token"
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>This is an informational alert rather than a vulnerability and so there is nothing to fix.</p>",
+					"otherinfo": "<p>userParam=Login</p><p>userValue=Login</p><p>passwordParam=password</p><p>referer=http://127.0.0.1/login.php</p><p>csrfToken=user_token</p>",
+					"reference": "<p>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/auth-req-id/</p>",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "2853"
+				},
+				{
+					"pluginid": "10027",
+					"alertRef": "10027",
+					"alert": "Information Disclosure - Suspicious Comments",
+					"name": "Information Disclosure - Suspicious Comments",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response appears to contain suspicious comments which may help an attacker.</p>",
+					"instances":[ 
+						{
+							"id": "822",
+							"uri": "http://127.0.0.1/setup.php",
+							"nodeName": "http:\/\/127.0.0.1\/setup.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<!-- Create db button -->",
+							"otherinfo": "The following pattern was used: \\bDB\\b and was detected in likely comment: \"<!-- Create db button -->\", see evidence field for the suspicious comment/snippet."
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bDB\\b and was detected in likely comment: \"<!-- Create db button -->\", see evidence field for the suspicious comment/snippet.</p>",
+					"reference": "",
+					"cweid": "615",
+					"wascid": "13",
+					"sourceid": "2671"
+				},
+				{
+					"pluginid": "10112",
+					"alertRef": "10112",
+					"alert": "Session Management Response Identified",
+					"name": "Session Management Response Identified",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The given response has been identified as containing a session management token. The 'Other Info' field contains a set of header tokens that can be used in the Header Based Session Management Method. If the request is in a context which has a Session Management Method set to \"Auto-Detect\" then this rule will change the session management to use the tokens identified.</p>",
+					"instances":[ 
+						{
+							"id": "741",
+							"uri": "http://127.0.0.1",
+							"nodeName": "http:\/\/127.0.0.1",
+							"method": "GET",
+							"param": "PHPSESSID",
+							"attack": "",
+							"evidence": "PHPSESSID",
+							"otherinfo": "cookie:PHPSESSID"
+						},
+						{
+							"id": "740",
+							"uri": "http://127.0.0.1/",
+							"nodeName": "http:\/\/127.0.0.1\/",
+							"method": "GET",
+							"param": "PHPSESSID",
+							"attack": "",
+							"evidence": "PHPSESSID",
+							"otherinfo": "cookie:PHPSESSID"
+						},
+						{
+							"id": "761",
+							"uri": "http://127.0.0.1/about.php",
+							"nodeName": "http:\/\/127.0.0.1\/about.php",
+							"method": "GET",
+							"param": "PHPSESSID",
+							"attack": "",
+							"evidence": "PHPSESSID",
+							"otherinfo": "cookie:PHPSESSID"
+						}
+					],
+					"count": "3",
+					"systemic": false,
+					"solution": "<p>This is an informational alert rather than a vulnerability and so there is nothing to fix.</p>",
+					"otherinfo": "<p>cookie:PHPSESSID</p>",
+					"reference": "<p>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id/</p>",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "2615"
+				}
+			]
+		}
+	],
+	"sequences":[
+	]
+
+}

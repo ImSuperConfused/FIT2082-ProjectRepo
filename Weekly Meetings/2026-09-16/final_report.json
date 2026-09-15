@@ -1,0 +1,105 @@
+{
+    "report_metadata": {
+        "scanners": [
+            "OWASP ZAP"
+        ]
+    },
+    "findings": [
+        {
+            "scanner": "OWASP ZAP",
+            "site": "http://localhost:4280",
+            "title": "Content Security Policy (CSP) Header Not Set",
+            "risk": "Medium (High)",
+            "confidence": "3",
+            "cwe": "693"
+        },
+        {
+            "scanner": "OWASP ZAP",
+            "site": "http://localhost:4280",
+            "title": "HTTP Only Site",
+            "risk": "Medium (Medium)",
+            "confidence": "2",
+            "cwe": "311"
+        },
+        {
+            "scanner": "OWASP ZAP",
+            "site": "http://localhost:4280",
+            "title": "Missing Anti-clickjacking Header",
+            "risk": "Medium (Medium)",
+            "confidence": "2",
+            "cwe": "1021"
+        },
+        {
+            "scanner": "OWASP ZAP",
+            "site": "http://localhost:4280",
+            "title": "Parameter Tampering",
+            "risk": "Medium (Low)",
+            "confidence": "1",
+            "cwe": "472"
+        },
+        {
+            "scanner": "OWASP ZAP",
+            "site": "http://localhost:4280",
+            "title": "Cookie without SameSite Attribute",
+            "risk": "Low (Medium)",
+            "confidence": "2",
+            "cwe": "1275"
+        },
+        {
+            "scanner": "OWASP ZAP",
+            "site": "http://localhost:4280",
+            "title": "In Page Banner Information Leak",
+            "risk": "Low (High)",
+            "confidence": "3",
+            "cwe": "497"
+        },
+        {
+            "scanner": "OWASP ZAP",
+            "site": "http://localhost:4280",
+            "title": "Server Leaks Information via \"X-Powered-By\" HTTP Response Header Field(s)",
+            "risk": "Low (Medium)",
+            "confidence": "2",
+            "cwe": "497"
+        },
+        {
+            "scanner": "OWASP ZAP",
+            "site": "http://localhost:4280",
+            "title": "Server Leaks Version Information via \"Server\" HTTP Response Header Field",
+            "risk": "Low (High)",
+            "confidence": "3",
+            "cwe": "497"
+        },
+        {
+            "scanner": "OWASP ZAP",
+            "site": "http://localhost:4280",
+            "title": "X-Content-Type-Options Header Missing",
+            "risk": "Low (Medium)",
+            "confidence": "2",
+            "cwe": "693"
+        },
+        {
+            "scanner": "OWASP ZAP",
+            "site": "http://localhost:4280",
+            "title": "Authentication Request Identified",
+            "risk": "Informational (High)",
+            "confidence": "3",
+            "cwe": "-1"
+        },
+        {
+            "scanner": "OWASP ZAP",
+            "site": "http://localhost:4280",
+            "title": "Session Management Response Identified",
+            "risk": "Informational (Medium)",
+            "confidence": "2",
+            "cwe": "-1"
+        },
+        {
+            "scanner": "OWASP ZAP",
+            "site": "http://localhost:4280",
+            "title": "User Agent Fuzzer",
+            "risk": "Informational (Medium)",
+            "confidence": "2",
+            "cwe": "0"
+        }
+    ]
+}

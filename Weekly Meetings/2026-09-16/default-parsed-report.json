@@ -1,0 +1,226 @@
+[
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/",
+      "Type": "CWE-548",
+      "Message": "Directory indexing found.",
+      "References": "CWE-548"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/",
+      "Type": "Unknown",
+      "Message": "OPTIONS: Allowed HTTP Methods: GET, HEAD, POST, OPTIONS .",
+      "References": ""
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/images",
+      "Type": "(URL)",
+      "Message": "RFC-1918 IP address found in the 'location' header. The IP is \"172.17.0.2\".",
+      "References": "https://portswigger.net/kb/issues/00600300_private-ip-addresses-disclosed"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/images",
+      "Type": "CVE-2000-0649",
+      "Message": "/images: The web server may reveal its internal or real IP in the Location header via a request to with HTTP/1.0. The value is \"172.17.0.2\".",
+      "References": "CVE-2000-0649"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/",
+      "Type": "(URL)",
+      "Message": "Suggested security header missing: content-security-policy.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/",
+      "Type": "(URL)",
+      "Message": "Suggested security header missing: referrer-policy.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/",
+      "Type": "(URL)",
+      "Message": "Suggested security header missing: strict-transport-security.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/",
+      "Type": "(URL)",
+      "Message": "Suggested security header missing: permissions-policy.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/",
+      "Type": "(URL)",
+      "Message": "Suggested security header missing: x-content-type-options.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/",
+      "Type": "Unknown",
+      "Message": "Apache/2.4.25 appears to be outdated (current is at least 2.4.68).",
+      "References": ""
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/./",
+      "Type": "CWE-548",
+      "Message": "Directory indexing found.",
+      "References": "CWE-548"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/./",
+      "Type": "Unknown",
+      "Message": "Appending '/./' to a directory allows indexing.",
+      "References": ""
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa//",
+      "Type": "CWE-548",
+      "Message": "Directory indexing found.",
+      "References": "CWE-548"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa//",
+      "Type": "Unknown",
+      "Message": "Apache on Red Hat Linux release 9 reveals the root directory listing by default if there is no index page.",
+      "References": ""
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/%2e/",
+      "Type": "CWE-548",
+      "Message": "Directory indexing found.",
+      "References": "CWE-548"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/%2e/",
+      "Type": "(URL)",
+      "Message": "Weblogic allows source code or directory listing, upgrade to v6.0 SP1 or higher.",
+      "References": "https://web.archive.org/web/20171102042459/http://www.securityfocus.com/bid/2513"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa///",
+      "Type": "CWE-548",
+      "Message": "Directory indexing found.",
+      "References": "CWE-548"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/?PageServices",
+      "Type": "CVE-1999-0269",
+      "Message": "The remote server may allow directory listings through Web Publisher by forcing the server to show all files via 'open directory browsing'. Web Publisher should be disabled.",
+      "References": "CVE-1999-0269"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/?wp-cs-dump",
+      "Type": "CVE-1999-0269",
+      "Message": "The remote server may allow directory listings through Web Publisher by forcing the server to show all files via 'open directory browsing'. Web Publisher should be disabled.",
+      "References": "CVE-1999-0269"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/css/",
+      "Type": "CWE-548",
+      "Message": "Directory indexing found.",
+      "References": "CWE-548"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/css/",
+      "Type": "Unknown",
+      "Message": "This might be interesting.",
+      "References": ""
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/includes/",
+      "Type": "CWE-548",
+      "Message": "Directory indexing found.",
+      "References": "CWE-548"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/includes/",
+      "Type": "Unknown",
+      "Message": "This might be interesting.",
+      "References": ""
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/images/",
+      "Type": "CWE-548",
+      "Message": "Directory indexing found.",
+      "References": "CWE-548"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////",
+      "Type": "CWE-548",
+      "Message": "Directory indexing found.",
+      "References": "CWE-548"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////",
+      "Type": "CVE-2002-1078",
+      "Message": "Abyss 1.03 reveals directory listing when multiple /'s are requested.",
+      "References": "CVE-2002-1078"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/?D=A",
+      "Type": "CVE-2001-0731",
+      "Message": "Apache allows directory listings by requesting.",
+      "References": "CVE-2001-0731"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/?N=D",
+      "Type": "CVE-2001-0731",
+      "Message": "Apache allows directory listings by requesting.",
+      "References": "CVE-2001-0731"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/?S=A",
+      "Type": "CVE-2001-0731",
+      "Message": "Apache allows directory listings by requesting.",
+      "References": "CVE-2001-0731"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/?M=A",
+      "Type": "CVE-2001-0731",
+      "Message": "Apache allows directory listings. Upgrade Apache or disable directory indexing.",
+      "References": "CVE-2001-0731"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/",
+      "Type": "(URL)",
+      "Message": "X-Frame-Options header is deprecated and was replaced with the Content-Security-Policy HTTP header with the frame-ancestors directive.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site": "127.0.0.1/dvwa/",
+      "Type": "(URL)",
+      "Message": "The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type.",
+      "References": "https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/"
+   }
+]

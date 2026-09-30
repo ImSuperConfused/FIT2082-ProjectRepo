@@ -1,0 +1,522 @@
+[
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/",
+      "Title": "Directory indexing found.",
+      "Method": "GET",
+      "Description": "Directory indexing found.",
+      "References": "CWE-548"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/",
+      "Title": "OPTIONS: Allowed HTTP Methods: GET, HEAD, POST, OPTIONS .",
+      "Method": "OPTIONS",
+      "Description": "OPTIONS: Allowed HTTP Methods: GET, HEAD, POST, OPTIONS .",
+      "References": null
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/images",
+      "Title": "RFC-1918 IP address found in the 'location' header.",
+      "Method": "GET",
+      "Description": "RFC-1918 IP address found in the 'location' header. The IP is \"172.17.0.2\".",
+      "References": "https://portswigger.net/kb/issues/00600300_private-ip-addresses-disclosed"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/images",
+      "Title": "/images: The web server may reveal its internal or real IP in the Location header via a request to with HTTP/1.0.",
+      "Method": "GET",
+      "Description": "/images: The web server may reveal its internal or real IP in the Location header via a request to with HTTP/1.0. The value is \"172.17.0.2\".",
+      "References": "CVE-2000-0649"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/",
+      "Title": "Suggested security header missing: content-security-policy.",
+      "Method": "GET",
+      "Description": "Suggested security header missing: content-security-policy.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/",
+      "Title": "Suggested security header missing: referrer-policy.",
+      "Method": "GET",
+      "Description": "Suggested security header missing: referrer-policy.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/",
+      "Title": "Suggested security header missing: strict-transport-security.",
+      "Method": "GET",
+      "Description": "Suggested security header missing: strict-transport-security.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/",
+      "Title": "Suggested security header missing: permissions-policy.",
+      "Method": "GET",
+      "Description": "Suggested security header missing: permissions-policy.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/",
+      "Title": "Suggested security header missing: x-content-type-options.",
+      "Method": "GET",
+      "Description": "Suggested security header missing: x-content-type-options.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/",
+      "Title": "Apache/2.4.25 appears to be outdated (current is at least 2.4.68).",
+      "Method": "HEAD",
+      "Description": "Apache/2.4.25 appears to be outdated (current is at least 2.4.68).",
+      "References": null
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/./",
+      "Title": "Directory indexing found.",
+      "Method": "GET",
+      "Description": "Directory indexing found.",
+      "References": "CWE-548"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/./",
+      "Title": "Appending '/./' to a directory allows indexing.",
+      "Method": "GET",
+      "Description": "Appending '/./' to a directory allows indexing.",
+      "References": null
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa//",
+      "Title": "Directory indexing found.",
+      "Method": "GET",
+      "Description": "Directory indexing found.",
+      "References": "CWE-548"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa//",
+      "Title": "Apache on Red Hat Linux release 9 reveals the root directory listing by default if there is no index page.",
+      "Method": "GET",
+      "Description": "Apache on Red Hat Linux release 9 reveals the root directory listing by default if there is no index page.",
+      "References": null
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/%2e/",
+      "Title": "Directory indexing found.",
+      "Method": "GET",
+      "Description": "Directory indexing found.",
+      "References": "CWE-548"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/%2e/",
+      "Title": "Weblogic allows source code or directory listing, upgrade to v6.0 SP1 or higher.",
+      "Method": "GET",
+      "Description": "Weblogic allows source code or directory listing, upgrade to v6.0 SP1 or higher.",
+      "References": "https://web.archive.org/web/20171102042459/http://www.securityfocus.com/bid/2513"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa///",
+      "Title": "Directory indexing found.",
+      "Method": "GET",
+      "Description": "Directory indexing found.",
+      "References": "CWE-548"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/?PageServices",
+      "Title": "The remote server may allow directory listings through Web Publisher by forcing the server to show all files via 'open directory browsing'.",
+      "Method": "GET",
+      "Description": "The remote server may allow directory listings through Web Publisher by forcing the server to show all files via 'open directory browsing'. Web Publisher should be disabled.",
+      "References": "CVE-1999-0269"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/?wp-cs-dump",
+      "Title": "The remote server may allow directory listings through Web Publisher by forcing the server to show all files via 'open directory browsing'.",
+      "Method": "GET",
+      "Description": "The remote server may allow directory listings through Web Publisher by forcing the server to show all files via 'open directory browsing'. Web Publisher should be disabled.",
+      "References": "CVE-1999-0269"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/css/",
+      "Title": "Directory indexing found.",
+      "Method": "GET",
+      "Description": "Directory indexing found.",
+      "References": "CWE-548"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/css/",
+      "Title": "This might be interesting.",
+      "Method": "GET",
+      "Description": "This might be interesting.",
+      "References": null
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/includes/",
+      "Title": "Directory indexing found.",
+      "Method": "GET",
+      "Description": "Directory indexing found.",
+      "References": "CWE-548"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/includes/",
+      "Title": "This might be interesting.",
+      "Method": "GET",
+      "Description": "This might be interesting.",
+      "References": null
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/images/",
+      "Title": "Directory indexing found.",
+      "Method": "GET",
+      "Description": "Directory indexing found.",
+      "References": "CWE-548"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////",
+      "Title": "Directory indexing found.",
+      "Method": "GET",
+      "Description": "Directory indexing found.",
+      "References": "CWE-548"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////",
+      "Title": "Abyss 1.03 reveals directory listing when multiple /'s are requested.",
+      "Method": "GET",
+      "Description": "Abyss 1.03 reveals directory listing when multiple /'s are requested.",
+      "References": "CVE-2002-1078"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/?D=A",
+      "Title": "Apache allows directory listings by requesting.",
+      "Method": "GET",
+      "Description": "Apache allows directory listings by requesting.",
+      "References": "CVE-2001-0731"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/?N=D",
+      "Title": "Apache allows directory listings by requesting.",
+      "Method": "GET",
+      "Description": "Apache allows directory listings by requesting.",
+      "References": "CVE-2001-0731"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/?S=A",
+      "Title": "Apache allows directory listings by requesting.",
+      "Method": "GET",
+      "Description": "Apache allows directory listings by requesting.",
+      "References": "CVE-2001-0731"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/?M=A",
+      "Title": "Apache allows directory listings.",
+      "Method": "GET",
+      "Description": "Apache allows directory listings. Upgrade Apache or disable directory indexing.",
+      "References": "CVE-2001-0731"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/",
+      "Title": "X-Frame-Options header is deprecated and was replaced with the Content-Security-Policy HTTP header with the frame-ancestors directive.",
+      "Method": "GET",
+      "Description": "X-Frame-Options header is deprecated and was replaced with the Content-Security-Policy HTTP header with the frame-ancestors directive.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options"
+   },
+   {
+      "Scanner": "Nikto",
+      "Site URL": "127.0.0.1:80/dvwa/",
+      "Title": "The X-Content-Type-Options header is not set.",
+      "Method": "GET",
+      "Description": "The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type.",
+      "References": "https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280",
+      "Title": "Content Security Policy (CSP) Header Not Set",
+      "Method": "GET",
+      "Description": "Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP\nhttps://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html\nhttps://www.w3.org/TR/CSP/\nhttps://w3c.github.io/webappsec-csp/\nhttps://web.dev/articles/csp\nhttps://caniuse.com/#feat=contentsecuritypolicy\nhttps://content-security-policy.com/"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/login.php",
+      "Title": "Content Security Policy (CSP) Header Not Set",
+      "Method": "GET",
+      "Description": "Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP\nhttps://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html\nhttps://www.w3.org/TR/CSP/\nhttps://w3c.github.io/webappsec-csp/\nhttps://web.dev/articles/csp\nhttps://caniuse.com/#feat=contentsecuritypolicy\nhttps://content-security-policy.com/"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/sitemap.xml",
+      "Title": "Content Security Policy (CSP) Header Not Set",
+      "Method": "GET",
+      "Description": "Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP\nhttps://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html\nhttps://www.w3.org/TR/CSP/\nhttps://w3c.github.io/webappsec-csp/\nhttps://web.dev/articles/csp\nhttps://caniuse.com/#feat=contentsecuritypolicy\nhttps://content-security-policy.com/"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/",
+      "Title": "HTTP Only Site",
+      "Method": "GET",
+      "Description": "The site is only served under HTTP and not HTTPS.",
+      "References": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html\nhttps://letsencrypt.org/"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280",
+      "Title": "Missing Anti-clickjacking Header",
+      "Method": "GET",
+      "Description": "The response does not protect against 'ClickJacking' attacks. It should include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/login.php",
+      "Title": "Missing Anti-clickjacking Header",
+      "Method": "GET",
+      "Description": "The response does not protect against 'ClickJacking' attacks. It should include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/login.php",
+      "Title": "Parameter Tampering",
+      "Method": "POST",
+      "Description": "Parameter manipulation caused an error page or Java stack trace to be displayed. This indicated lack of exception handling and potential areas for further exploit.",
+      "References": null
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/login.php",
+      "Title": "Parameter Tampering",
+      "Method": "POST",
+      "Description": "Parameter manipulation caused an error page or Java stack trace to be displayed. This indicated lack of exception handling and potential areas for further exploit.",
+      "References": null
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280",
+      "Title": "Cookie without SameSite Attribute",
+      "Method": "GET",
+      "Description": "A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.",
+      "References": "https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-same-site"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/sitemap.xml",
+      "Title": "In Page Banner Information Leak",
+      "Method": "GET",
+      "Description": "The server returned a version banner string in the response content. Such information leaks may allow attackers to further target specific issues impacting the product and version in use.",
+      "References": "https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280",
+      "Title": "Server Leaks Information via \"X-Powered-By\" HTTP Response Header Field(s)",
+      "Method": "GET",
+      "Description": "The web/application server is leaking information via one or more \"X-Powered-By\" HTTP response headers. Access to such information may facilitate attackers identifying other frameworks/components your web application is reliant upon and the vulnerabilities such components may be subject to.",
+      "References": "https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework\nhttps://www.troyhunt.com/shhh-dont-let-your-response-headers/"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/",
+      "Title": "Server Leaks Information via \"X-Powered-By\" HTTP Response Header Field(s)",
+      "Method": "GET",
+      "Description": "The web/application server is leaking information via one or more \"X-Powered-By\" HTTP response headers. Access to such information may facilitate attackers identifying other frameworks/components your web application is reliant upon and the vulnerabilities such components may be subject to.",
+      "References": "https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework\nhttps://www.troyhunt.com/shhh-dont-let-your-response-headers/"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/login.php",
+      "Title": "Server Leaks Information via \"X-Powered-By\" HTTP Response Header Field(s)",
+      "Method": "GET",
+      "Description": "The web/application server is leaking information via one or more \"X-Powered-By\" HTTP response headers. Access to such information may facilitate attackers identifying other frameworks/components your web application is reliant upon and the vulnerabilities such components may be subject to.",
+      "References": "https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework\nhttps://www.troyhunt.com/shhh-dont-let-your-response-headers/"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/login.php",
+      "Title": "Server Leaks Information via \"X-Powered-By\" HTTP Response Header Field(s)",
+      "Method": "POST",
+      "Description": "The web/application server is leaking information via one or more \"X-Powered-By\" HTTP response headers. Access to such information may facilitate attackers identifying other frameworks/components your web application is reliant upon and the vulnerabilities such components may be subject to.",
+      "References": "https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework\nhttps://www.troyhunt.com/shhh-dont-let-your-response-headers/"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/",
+      "Title": "Server Leaks Version Information via \"Server\" HTTP Response Header Field",
+      "Method": "GET",
+      "Description": "The web/application server is leaking version information via the \"Server\" HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.",
+      "References": "https://httpd.apache.org/docs/current/mod/core.html#servertokens\nhttps://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552(v=pandp.10)\nhttps://www.troyhunt.com/shhh-dont-let-your-response-headers/"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/dvwa/css/login.css",
+      "Title": "Server Leaks Version Information via \"Server\" HTTP Response Header Field",
+      "Method": "GET",
+      "Description": "The web/application server is leaking version information via the \"Server\" HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.",
+      "References": "https://httpd.apache.org/docs/current/mod/core.html#servertokens\nhttps://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552(v=pandp.10)\nhttps://www.troyhunt.com/shhh-dont-let-your-response-headers/"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/dvwa/images/login_logo.png",
+      "Title": "Server Leaks Version Information via \"Server\" HTTP Response Header Field",
+      "Method": "GET",
+      "Description": "The web/application server is leaking version information via the \"Server\" HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.",
+      "References": "https://httpd.apache.org/docs/current/mod/core.html#servertokens\nhttps://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552(v=pandp.10)\nhttps://www.troyhunt.com/shhh-dont-let-your-response-headers/"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/robots.txt",
+      "Title": "Server Leaks Version Information via \"Server\" HTTP Response Header Field",
+      "Method": "GET",
+      "Description": "The web/application server is leaking version information via the \"Server\" HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.",
+      "References": "https://httpd.apache.org/docs/current/mod/core.html#servertokens\nhttps://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552(v=pandp.10)\nhttps://www.troyhunt.com/shhh-dont-let-your-response-headers/"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/login.php",
+      "Title": "Server Leaks Version Information via \"Server\" HTTP Response Header Field",
+      "Method": "POST",
+      "Description": "The web/application server is leaking version information via the \"Server\" HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.",
+      "References": "https://httpd.apache.org/docs/current/mod/core.html#servertokens\nhttps://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552(v=pandp.10)\nhttps://www.troyhunt.com/shhh-dont-let-your-response-headers/"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280",
+      "Title": "X-Content-Type-Options Header Missing",
+      "Method": "GET",
+      "Description": "The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.",
+      "References": "https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)\nhttps://owasp.org/www-community/Security_Headers"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/dvwa/css/login.css",
+      "Title": "X-Content-Type-Options Header Missing",
+      "Method": "GET",
+      "Description": "The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.",
+      "References": "https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)\nhttps://owasp.org/www-community/Security_Headers"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/dvwa/images/login_logo.png",
+      "Title": "X-Content-Type-Options Header Missing",
+      "Method": "GET",
+      "Description": "The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.",
+      "References": "https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)\nhttps://owasp.org/www-community/Security_Headers"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/login.php",
+      "Title": "X-Content-Type-Options Header Missing",
+      "Method": "GET",
+      "Description": "The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.",
+      "References": "https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)\nhttps://owasp.org/www-community/Security_Headers"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/robots.txt",
+      "Title": "X-Content-Type-Options Header Missing",
+      "Method": "GET",
+      "Description": "The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.",
+      "References": "https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)\nhttps://owasp.org/www-community/Security_Headers"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/login.php",
+      "Title": "Authentication Request Identified",
+      "Method": "POST",
+      "Description": "The given request has been identified as an authentication request. The 'Other Info' field contains a set of key=value lines which identify any relevant fields. If the request is in a context which has an Authentication Method set to \"Auto-Detect\" then this rule will change the authentication to match the request identified.",
+      "References": "https://www.zaproxy.org/docs/desktop/addons/authentication-helper/auth-req-id/"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280",
+      "Title": "Session Management Response Identified",
+      "Method": "GET",
+      "Description": "The given response has been identified as containing a session management token. The 'Other Info' field contains a set of header tokens that can be used in the Header Based Session Management Method. If the request is in a context which has a Session Management Method set to \"Auto-Detect\" then this rule will change the session management to use the tokens identified.",
+      "References": "https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id/"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/login.php",
+      "Title": "Session Management Response Identified",
+      "Method": "POST",
+      "Description": "The given response has been identified as containing a session management token. The 'Other Info' field contains a set of header tokens that can be used in the Header Based Session Management Method. If the request is in a context which has a Session Management Method set to \"Auto-Detect\" then this rule will change the session management to use the tokens identified.",
+      "References": "https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id/"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280",
+      "Title": "Session Management Response Identified",
+      "Method": "GET",
+      "Description": "The given response has been identified as containing a session management token. The 'Other Info' field contains a set of header tokens that can be used in the Header Based Session Management Method. If the request is in a context which has a Session Management Method set to \"Auto-Detect\" then this rule will change the session management to use the tokens identified.",
+      "References": "https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id/"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280",
+      "Title": "User Agent Fuzzer",
+      "Method": "GET",
+      "Description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.",
+      "References": "https://owasp.org/wstg"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/",
+      "Title": "User Agent Fuzzer",
+      "Method": "GET",
+      "Description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.",
+      "References": "https://owasp.org/wstg"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/dvwa",
+      "Title": "User Agent Fuzzer",
+      "Method": "GET",
+      "Description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.",
+      "References": "https://owasp.org/wstg"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/dvwa/css",
+      "Title": "User Agent Fuzzer",
+      "Method": "GET",
+      "Description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.",
+      "References": "https://owasp.org/wstg"
+   },
+   {
+      "Scanner": "ZAP",
+      "Site URL": "http://localhost:4280/dvwa/images",
+      "Title": "User Agent Fuzzer",
+      "Method": "GET",
+      "Description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.",
+      "References": "https://owasp.org/wstg"
+   }
+]

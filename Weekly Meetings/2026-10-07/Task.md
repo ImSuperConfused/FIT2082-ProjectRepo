@@ -6,3 +6,5 @@ Work on Nikto/ZAP - check whether your scanner has functionality to select the b
 Both on DVWA.
 
 Add the duplication module for it to be reviewed later.
+
+Add the scores.

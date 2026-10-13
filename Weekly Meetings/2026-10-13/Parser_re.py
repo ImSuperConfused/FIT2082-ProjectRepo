@@ -1,20 +1,37 @@
-
 """
-OWASP ZAP Vulnerability Report Parser
+OWASP ZAP Vulnerability Report Parser (with within-ZAP deduplication)
 
 Usage:
     python3 unified_vuln_parser.py zap_report.json
     python3 unified_vuln_parser.py zap_report.json -o zap_parsed.json
     python3 unified_vuln_parser.py zap_chrome.json zap_firefox.json -o zap_parsed.json
+    python3 unified_vuln_parser.py zap_chrome.json zap_firefox.json --raw-output zap_raw.json
+    python3 unified_vuln_parser.py zap_report.json --no-dedup
 
 Supported scanner:
     - OWASP ZAP JSON reports
 
-Output:
-    A JSON list of findings using a consistent schema.
-    Each ZAP alert instance is preserved as a separate record.
+Pipeline:
+    1. Parse: every ZAP alert instance becomes a separate record, tagged
+       with the report file it came from (Source_Report).
+    2. Deduplicate within ZAP: records describing the same issue (same
+       alert, URL, method and parameter) are collapsed into one, across
+       all reports given (e.g. Chrome run + Firefox run).
+    3. Output: deduplicated findings (and optionally the raw findings so
+       the duplication step can be reviewed).
 
-Caution: Chat GPT used to help improve the previous ZAP parser.py 
+Output:
+    A JSON list of findings using a consistent schema. Deduplicated
+    records also carry:
+        Duplicate_Count - how many raw records were merged into this one
+        Sources - list of report files the issue was seen in
+        Instance_IDs- ZAP instance IDs that were merged
+        All_Evidence / All_Attacks / All_Other_Info - every distinct value seen across the duplicates
+
+The later ZAP vs Nikto (cross-scanner) deduplication can match on the
+normalised "Site URL", "Method" and "Title"/CWE of these records.
+
+Caution: Chat GPT used to help improve the previous ZAP parser.py
 """
 
 import argparse
@@ -26,7 +43,7 @@ import time
 
 from datetime import datetime
 from pathlib import Path
-from urllib.parse import urljoin, urlsplit
+from urllib.parse import parse_qsl, urlencode, urljoin, urlsplit
 
 
 DEFAULT_OUTPUT = "default-parsed-report.json"
@@ -108,6 +125,14 @@ def normalise_risk_code(value):
         return value
 
 
+def risk_value(value) -> int:
+    """Return a risk code as an int for comparison (0 if unknown)."""
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return 0
+
+
 def build_site_url(site_name: str, uri: str) -> str:
     """
     Build an absolute URL from the ZAP site name and instance URI.
@@ -127,14 +152,15 @@ def build_site_url(site_name: str, uri: str) -> str:
     return uri
 
 
-# OWASP ZAP parser- Improved to fit this parser by Chat GPT  
+# OWASP ZAP parser- Improved to fit this parser by Chat GPT
 
-def parse_zap(reports: list) -> list:
+def parse_zap(reports: list, source: str = None) -> list:
     """
     Parse OWASP ZAP JSON reports.
 
     Each alert instance becomes a separate finding. Alert metadata and
     instance evidence are preserved for deduplication and scoring.
+    `source` labels which report file the findings came from.
     """
     results = []
 
@@ -205,10 +231,130 @@ def parse_zap(reports: list) -> list:
                             Evidence=instance.get("evidence"),
                             Attack=instance.get("attack"),
                             Other_Info=instance.get("otherinfo"),
+
+                            # Provenance (which report file this came from).
+                            Source_Report=source,
                         )
                     )
 
     return results
+
+
+# Deduplication within ZAP
+
+def normalise_url(url: str) -> str:
+    """
+    Normalise a URL so equivalent forms compare equal.
+
+    - lowercase scheme and host; map localhost to 127.0.0.1
+    - drop default ports (80 for http, 443 for https)
+    - drop fragment and trailing slash
+    - sort query parameters (values are left untouched)
+    """
+    if not url:
+        return ""
+
+    parts = urlsplit(url)
+    scheme = parts.scheme.lower()
+    host = (parts.hostname or "").lower()
+
+    if host == "localhost":
+        host = "127.0.0.1"
+    if ":" in host:  # IPv6 literal
+        host = f"[{host}]"
+
+    port = parts.port
+    if port and (scheme, port) not in (("http", 80), ("https", 443)):
+        host = f"{host}:{port}"
+
+    path = parts.path.rstrip("/") or "/"
+
+    pairs = sorted(parse_qsl(parts.query, keep_blank_values=True))
+    query = f"?{urlencode(pairs)}" if pairs else ""
+
+    return f"{scheme}://{host}{path}{query}"
+
+
+# Fields whose distinct values are all kept when duplicates are merged.
+MERGED_FIELDS = {
+    "Evidence": "All_Evidence",
+    "Attack": "All_Attacks",
+    "Other_Info": "All_Other_Info",
+}
+
+
+def _listed(value) -> list:
+    """Return [value] if it is set, else an empty list."""
+    return [value] if value else []
+
+
+def dedup_key(item: dict) -> tuple:
+    """
+    Define what makes two ZAP findings the same issue.
+
+    Same alert + same normalised URL + same HTTP method + same parameter.
+    Instance_ID is excluded (unique per instance). Evidence and Attack are
+    excluded so different payloads against one parameter collapse into one
+    finding, but their distinct values are all kept on the merged record
+    (All_Evidence, All_Attacks, All_Other_Info). Add them here instead if
+    the team wants them treated as separate findings.
+    """
+    return (
+        item.get("Alert_Ref") or item.get("Alert_ID") or item.get("Title"),
+        normalise_url(item.get("Site URL")),
+        (item.get("Method") or "").upper(),
+        item.get("Parameter") or "",
+    )
+
+
+def deduplicate_zap(findings: list) -> list:
+    """Collapse duplicate findings within ZAP, keeping provenance."""
+    seen = {}
+
+    for item in findings:
+        key = dedup_key(item)
+        source = item.get("Source_Report")
+
+        if key not in seen:
+            record = dict(item)
+            record.pop("Source_Report", None)
+            record["Duplicate_Count"] = 1
+            record["Sources"] = [source] if source else []
+            record["Instance_IDs"] = _listed(item.get("Instance_ID"))
+
+            # Keep every distinct value so no evidence is lost on merge.
+            for field, merged in MERGED_FIELDS.items():
+                record[merged] = _listed(item.get(field))
+
+            seen[key] = record
+            continue
+
+        kept = seen[key]
+        kept["Duplicate_Count"] += 1
+
+        if source and source not in kept["Sources"]:
+            kept["Sources"].append(source)
+
+        instance_id = item.get("Instance_ID")
+        if instance_id and instance_id not in kept["Instance_IDs"]:
+            kept["Instance_IDs"].append(instance_id)
+
+        # Keep the most severe version if risk differs.
+        if risk_value(item.get("Risk_Code")) > risk_value(kept.get("Risk_Code")):
+            for field in ("Risk", "Risk_Code", "Confidence"):
+                kept[field] = item.get(field)
+
+        # Collect distinct evidence / payloads / notes from every duplicate.
+        for field, merged in MERGED_FIELDS.items():
+            value = item.get(field)
+            if value and value not in kept[merged]:
+                kept[merged].append(value)
+
+            # Keep the single-value field populated too.
+            if not kept.get(field) and value:
+                kept[field] = value
+
+    return list(seen.values())
 
 
 # Load and parse reports
@@ -261,19 +407,20 @@ def parser(path: str) -> list:
     )
 
     try:
-        return parse_zap(reports)
+        return parse_zap(reports, source=Path(path).name)
     except (AttributeError, TypeError, KeyError) as error:
         raise ValueError(
             f"Invalid ZAP report structure in {path}: {error}"
         ) from error
 
 
-# Command-line interface- Added by Chat GPT for improvement 
+# Command-line interface- Added by Chat GPT for improvement
 
 def main():
     args_parser = argparse.ArgumentParser(
         description=(
-            "Parse OWASP ZAP JSON reports into a unified finding format."
+            "Parse OWASP ZAP JSON reports into a unified finding format "
+            "and remove duplicates within ZAP."
         )
     )
 
@@ -292,6 +439,19 @@ def main():
         help=f"Output JSON filename (default: {DEFAULT_OUTPUT}).",
     )
 
+    args_parser.add_argument(
+        "--raw-output",
+        metavar="FILENAME",
+        default=None,
+        help="Also save the findings before deduplication, for review.",
+    )
+
+    args_parser.add_argument(
+        "--no-dedup",
+        action="store_true",
+        help="Skip deduplication and output every instance.",
+    )
+
     args = args_parser.parse_args()
     start_timer = time.perf_counter()
 
@@ -300,13 +460,13 @@ def main():
         file=sys.stderr,
     )
 
-    all_findings = []
+    raw_findings = []
     errors = []
 
     for report_path in args.reports:
         try:
             parsed_findings = parser(report_path)
-            all_findings.extend(parsed_findings)
+            raw_findings.extend(parsed_findings)
 
             print(
                 f"[+] Parsed {len(parsed_findings)} finding(s) "
@@ -319,15 +479,30 @@ def main():
             print(f"[-] {message}", file=sys.stderr)
             errors.append(message)
 
-    if errors and not all_findings:
+    if errors and not raw_findings:
         print(
             "[-] No findings produced. Check the input report(s).",
             file=sys.stderr,
         )
         return 1
 
+    if args.no_dedup:
+        final_findings = raw_findings
+    else:
+        final_findings = deduplicate_zap(raw_findings)
+        removed = len(raw_findings) - len(final_findings)
+        print(
+            f"[+] Deduplication: {len(raw_findings)} -> "
+            f"{len(final_findings)} finding(s) ({removed} duplicate(s) removed)",
+            file=sys.stderr,
+        )
+
     try:
-        saved_path = output(all_findings, args.output)
+        if args.raw_output:
+            raw_path = output(raw_findings, args.raw_output)
+            print(f"[+] Raw findings saved to: {raw_path}", file=sys.stderr)
+
+        saved_path = output(final_findings, args.output)
     except OSError as error:
         print(
             f"[-] Could not write output file: {error}",
@@ -336,7 +511,7 @@ def main():
         return 1
 
     print(
-        f"[+] Total findings: {len(all_findings)}",
+        f"[+] Total findings: {len(final_findings)}",
         file=sys.stderr,
     )
     print(f"[+] Output saved to: {saved_path}", file=sys.stderr)

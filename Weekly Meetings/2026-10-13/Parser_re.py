@@ -17,16 +17,19 @@ Pipeline:
     2. Deduplicate within ZAP: records describing the same issue (same
        alert, URL, method and parameter) are collapsed into one, across
        all reports given (e.g. Chrome run + Firefox run).
-    3. Output: deduplicated findings (and optionally the raw findings so
+    3. Score: each finding gets a Score from 0 to 10 (see calculate_score).
+    4. Output: deduplicated findings (and optionally the raw findings so
        the duplication step can be reviewed).
 
 Output:
     A JSON list of findings using a consistent schema. Deduplicated
     records also carry:
         Duplicate_Count - how many raw records were merged into this one
-        Sources - list of report files the issue was seen in
-        Instance_IDs- ZAP instance IDs that were merged
-        All_Evidence / All_Attacks / All_Other_Info - every distinct value seen across the duplicates
+        Sources         - list of report files the issue was seen in
+        Instance_IDs    - ZAP instance IDs that were merged
+        Score           - 0-10, from ZAP risk and confidence (all findings)
+        All_Evidence / All_Attacks / All_Other_Info
+                        - every distinct value seen across the duplicates
 
 The later ZAP vs Nikto (cross-scanner) deduplication can match on the
 normalised "Site URL", "Method" and "Title"/CWE of these records.
@@ -131,6 +134,43 @@ def risk_value(value) -> int:
         return int(value)
     except (TypeError, ValueError):
         return 0
+
+
+# Scoring
+
+MAX_RISK = 3        # ZAP risk codes: 0 info, 1 low, 2 medium, 3 high
+MAX_CONFIDENCE = 3  # ZAP confidence: 0 false positive, 1 low, 2 medium, 3 high
+
+
+def calculate_score(item: dict) -> float:
+    """
+    Score a finding from 0 to 10.
+
+    Score = (risk / 3) * (confidence / 3) * 10
+
+    So a High-risk, High-confidence finding scores 10.0, a Medium-risk,
+    Medium-confidence one scores about 4.4, and Informational findings
+    score 0. Confidence 4 (user confirmed) is treated as High and
+    confidence 0 (false positive) scores 0. Change the formula here if
+    the team agrees on a different one.
+    """
+    risk = min(max(risk_value(item.get("Risk_Code")), 0), MAX_RISK)
+
+    try:
+        confidence = int(item.get("Confidence"))
+    except (TypeError, ValueError):
+        confidence = 0
+    confidence = min(max(confidence, 0), MAX_CONFIDENCE)
+
+    return round((risk / MAX_RISK) * (confidence / MAX_CONFIDENCE) * 10, 1)
+
+
+def add_scores(findings: list) -> list:
+    """Add a Score to every finding."""
+    for item in findings:
+        item["Score"] = calculate_score(item)
+
+    return findings
 
 
 def build_site_url(site_name: str, uri: str) -> str:
@@ -496,6 +536,8 @@ def main():
             f"{len(final_findings)} finding(s) ({removed} duplicate(s) removed)",
             file=sys.stderr,
         )
+
+    final_findings = add_scores(final_findings)
 
     try:
         if args.raw_output:

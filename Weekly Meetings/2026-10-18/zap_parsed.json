@@ -1,0 +1,314 @@
+[
+   {
+      "Scanner": "ZAP",
+      "Title": "Content Security Policy (CSP) Header Not Set",
+      "Site URL": "http://127.0.0.1:4280/login.php, http://127.0.0.1:4280/security.php, http://127.0.0.1:4280/sitemap.xml",
+      "Method": "GET",
+      "Description": "Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP\nhttps://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html\nhttps://www.w3.org/TR/CSP/\nhttps://w3c.github.io/webappsec-csp/\nhttps://web.dev/articles/csp\nhttps://caniuse.com/#feat=contentsecuritypolicy\nhttps://content-security-policy.com/",
+      "Alert ID": "10038",
+      "Risk": "Medium (High)",
+      "Risk Code": 2,
+      "Confidence": 3,
+      "CWE": "693",
+      "CVE": null,
+      "Solution": "Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.",
+      "Parameters": [],
+      "Evidence": [],
+      "Attacks": [],
+      "Other Info": [],
+      "Affected Count": 3,
+      "Duplicates Merged": 3,
+      "Sources": [
+         "DVWA_ZAP_Chrome.json"
+      ],
+      "Score": 5.2,
+      "Score Source": "ZAP heuristic",
+      "Severity": "Medium"
+   },
+   {
+      "Scanner": "ZAP",
+      "Title": "Missing Anti-clickjacking Header",
+      "Site URL": "http://127.0.0.1:4280/login.php, http://127.0.0.1:4280/security.php",
+      "Method": "GET",
+      "Description": "The response does not protect against 'ClickJacking' attacks. It should include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options",
+      "Alert ID": "10020",
+      "Risk": "Medium (Medium)",
+      "Risk Code": 2,
+      "Confidence": 2,
+      "CWE": "1021",
+      "CVE": null,
+      "Solution": "Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.\nIf you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's \"frame-ancestors\" directive.",
+      "Parameters": [
+         "x-frame-options"
+      ],
+      "Evidence": [],
+      "Attacks": [],
+      "Other Info": [],
+      "Affected Count": 2,
+      "Duplicates Merged": 2,
+      "Sources": [
+         "DVWA_ZAP_Chrome.json"
+      ],
+      "Score": 4.2,
+      "Score Source": "ZAP heuristic",
+      "Severity": "Medium"
+   },
+   {
+      "Scanner": "ZAP",
+      "Title": "Cookie without SameSite Attribute",
+      "Site URL": "http://127.0.0.1:4280/security.php",
+      "Method": "GET",
+      "Description": "A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.",
+      "References": "https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-same-site",
+      "Alert ID": "10054",
+      "Risk": "Low (Medium)",
+      "Risk Code": 1,
+      "Confidence": 2,
+      "CWE": "1275",
+      "CVE": null,
+      "Solution": "Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.",
+      "Parameters": [
+         "security"
+      ],
+      "Evidence": [
+         "Set-Cookie: security"
+      ],
+      "Attacks": [],
+      "Other Info": [],
+      "Affected Count": 1,
+      "Duplicates Merged": 1,
+      "Sources": [
+         "DVWA_ZAP_Chrome.json"
+      ],
+      "Score": 2.4,
+      "Score Source": "ZAP heuristic",
+      "Severity": "Low"
+   },
+   {
+      "Scanner": "ZAP",
+      "Title": "In Page Banner Information Leak",
+      "Site URL": "http://127.0.0.1:4280/sitemap.xml",
+      "Method": "GET",
+      "Description": "The server returned a version banner string in the response content. Such information leaks may allow attackers to further target specific issues impacting the product and version in use.",
+      "References": "https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/",
+      "Alert ID": "10009",
+      "Risk": "Low (High)",
+      "Risk Code": 1,
+      "Confidence": 3,
+      "CWE": "497",
+      "CVE": null,
+      "Solution": "Configure the server to prevent such information leaks. For example:\nUnder Tomcat this is done via the \"server\" directive and implementation of custom error pages.\nUnder Apache this is done via the \"ServerSignature\" and \"ServerTokens\" directives.",
+      "Parameters": [],
+      "Evidence": [
+         "Apache/2.4.68"
+      ],
+      "Attacks": [],
+      "Other Info": [
+         "There is a chance that the highlight in the finding is on a value in the headers, versus the actual matched string in the response body."
+      ],
+      "Affected Count": 1,
+      "Duplicates Merged": 1,
+      "Sources": [
+         "DVWA_ZAP_Chrome.json"
+      ],
+      "Score": 2.5,
+      "Score Source": "ZAP heuristic",
+      "Severity": "Low"
+   },
+   {
+      "Scanner": "ZAP",
+      "Title": "Server Leaks Information via \"X-Powered-By\" HTTP Response Header Field(s)",
+      "Site URL": "http://127.0.0.1:4280/, http://127.0.0.1:4280/login.php, http://127.0.0.1:4280/security.php",
+      "Method": "GET, POST",
+      "Description": "The web/application server is leaking information via one or more \"X-Powered-By\" HTTP response headers. Access to such information may facilitate attackers identifying other frameworks/components your web application is reliant upon and the vulnerabilities such components may be subject to.",
+      "References": "https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework\nhttps://www.troyhunt.com/shhh-dont-let-your-response-headers/",
+      "Alert ID": "10037",
+      "Risk": "Low (Medium)",
+      "Risk Code": 1,
+      "Confidence": 2,
+      "CWE": "497",
+      "CVE": null,
+      "Solution": "Ensure that your web server, application server, load balancer, etc. is configured to suppress \"X-Powered-By\" headers.",
+      "Parameters": [],
+      "Evidence": [
+         "X-Powered-By: PHP/8.5.11"
+      ],
+      "Attacks": [],
+      "Other Info": [],
+      "Affected Count": 3,
+      "Duplicates Merged": 4,
+      "Sources": [
+         "DVWA_ZAP_Chrome.json"
+      ],
+      "Score": 2.2,
+      "Score Source": "ZAP heuristic",
+      "Severity": "Low"
+   },
+   {
+      "Scanner": "ZAP",
+      "Title": "Server Leaks Version Information via \"Server\" HTTP Response Header Field",
+      "Site URL": "http://127.0.0.1:4280/, http://127.0.0.1:4280/dvwa/css/login.css, http://127.0.0.1:4280/dvwa/images/login_logo.png, http://127.0.0.1:4280/login.php, http://127.0.0.1:4280/robots.txt",
+      "Method": "GET, POST",
+      "Description": "The web/application server is leaking version information via the \"Server\" HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.",
+      "References": "https://httpd.apache.org/docs/current/mod/core.html#servertokens\nhttps://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552(v=pandp.10)\nhttps://www.troyhunt.com/shhh-dont-let-your-response-headers/",
+      "Alert ID": "10036",
+      "Risk": "Low (High)",
+      "Risk Code": 1,
+      "Confidence": 3,
+      "CWE": "497",
+      "CVE": null,
+      "Solution": "Ensure that your web server, application server, load balancer, etc. is configured to suppress the \"Server\" header or provide generic details.",
+      "Parameters": [],
+      "Evidence": [
+         "Apache/2.4.68 (Debian)"
+      ],
+      "Attacks": [],
+      "Other Info": [],
+      "Affected Count": 5,
+      "Duplicates Merged": 5,
+      "Sources": [
+         "DVWA_ZAP_Chrome.json"
+      ],
+      "Score": 2.8,
+      "Score Source": "ZAP heuristic",
+      "Severity": "Low"
+   },
+   {
+      "Scanner": "ZAP",
+      "Title": "X-Content-Type-Options Header Missing",
+      "Site URL": "http://127.0.0.1:4280/dvwa/css/login.css, http://127.0.0.1:4280/dvwa/images/login_logo.png, http://127.0.0.1:4280/login.php, http://127.0.0.1:4280/robots.txt, http://127.0.0.1:4280/security.php",
+      "Method": "GET",
+      "Description": "The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.",
+      "References": "https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)\nhttps://owasp.org/www-community/Security_Headers",
+      "Alert ID": "10021",
+      "Risk": "Low (Medium)",
+      "Risk Code": 1,
+      "Confidence": 2,
+      "CWE": "693",
+      "CVE": null,
+      "Solution": "Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.\nIf possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.",
+      "Parameters": [
+         "x-content-type-options"
+      ],
+      "Evidence": [],
+      "Attacks": [],
+      "Other Info": [
+         "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+      ],
+      "Affected Count": 5,
+      "Duplicates Merged": 5,
+      "Sources": [
+         "DVWA_ZAP_Chrome.json"
+      ],
+      "Score": 2.3,
+      "Score Source": "ZAP heuristic",
+      "Severity": "Low"
+   },
+   {
+      "Scanner": "ZAP",
+      "Title": "Authentication Request Identified",
+      "Site URL": "http://127.0.0.1:4280/login.php",
+      "Method": "POST",
+      "Description": "The given request has been identified as an authentication request. The 'Other Info' field contains a set of key=value lines which identify any relevant fields. If the request is in a context which has an Authentication Method set to \"Auto-Detect\" then this rule will change the authentication to match the request identified.",
+      "References": "https://www.zaproxy.org/docs/desktop/addons/authentication-helper/auth-req-id/",
+      "Alert ID": "10111",
+      "Risk": "Informational (High)",
+      "Risk Code": 0,
+      "Confidence": 3,
+      "CWE": "-1",
+      "CVE": null,
+      "Solution": "This is an informational alert rather than a vulnerability and so there is nothing to fix.",
+      "Parameters": [
+         "Login"
+      ],
+      "Evidence": [
+         "password"
+      ],
+      "Attacks": [],
+      "Other Info": [
+         "userParam=Login\nuserValue=Login\npasswordParam=password\nreferer=http://127.0.0.1:4280/login.php\ncsrfToken=user_token"
+      ],
+      "Affected Count": 1,
+      "Duplicates Merged": 1,
+      "Sources": [
+         "DVWA_ZAP_Chrome.json"
+      ],
+      "Score": 0.0,
+      "Score Source": "heuristic",
+      "Severity": "None"
+   },
+   {
+      "Scanner": "ZAP",
+      "Title": "Session Management Response Identified",
+      "Site URL": "http://127.0.0.1:4280/login.php, http://127.0.0.1:4280/security.php",
+      "Method": "GET, POST",
+      "Description": "The given response has been identified as containing a session management token. The 'Other Info' field contains a set of header tokens that can be used in the Header Based Session Management Method. If the request is in a context which has a Session Management Method set to \"Auto-Detect\" then this rule will change the session management to use the tokens identified.",
+      "References": "https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id/",
+      "Alert ID": "10112",
+      "Risk": "Informational (Medium)",
+      "Risk Code": 0,
+      "Confidence": 2,
+      "CWE": "-1",
+      "CVE": null,
+      "Solution": "This is an informational alert rather than a vulnerability and so there is nothing to fix.",
+      "Parameters": [
+         "security",
+         "PHPSESSID"
+      ],
+      "Evidence": [
+         "security",
+         "PHPSESSID"
+      ],
+      "Attacks": [],
+      "Other Info": [
+         "cookie:security\ncookie:PHPSESSID",
+         "cookie:PHPSESSID",
+         "cookie:security"
+      ],
+      "Affected Count": 2,
+      "Duplicates Merged": 4,
+      "Sources": [
+         "DVWA_ZAP_Chrome.json"
+      ],
+      "Score": 0.0,
+      "Score Source": "heuristic",
+      "Severity": "None"
+   },
+   {
+      "Scanner": "ZAP",
+      "Title": "User Agent Fuzzer",
+      "Site URL": "http://127.0.0.1:4280/security.php",
+      "Method": "GET",
+      "Description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.",
+      "References": "https://owasp.org/wstg",
+      "Alert ID": "10104",
+      "Risk": "Informational (Medium)",
+      "Risk Code": 0,
+      "Confidence": 2,
+      "CWE": "0",
+      "CVE": null,
+      "Solution": null,
+      "Parameters": [
+         "Header User-Agent"
+      ],
+      "Evidence": [],
+      "Attacks": [
+         "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+         "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+         "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+         "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0"
+      ],
+      "Other Info": [],
+      "Affected Count": 1,
+      "Duplicates Merged": 5,
+      "Sources": [
+         "DVWA_ZAP_Chrome.json"
+      ],
+      "Score": 0.0,
+      "Score Source": "heuristic",
+      "Severity": "None"
+   }
+]

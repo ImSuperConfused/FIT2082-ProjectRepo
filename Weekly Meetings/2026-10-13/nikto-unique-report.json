@@ -1,0 +1,167 @@
+[
+   {
+      "Scanner": "Nikto",
+      "Title": "Directory indexing found.",
+      "Site URL": "127.0.0.1:80/dvwa/, 127.0.0.1:80/dvwa/./, 127.0.0.1:80/dvwa//, 127.0.0.1:80/dvwa/%2e/, 127.0.0.1:80/dvwa///, 127.0.0.1:80/dvwa/css/, 127.0.0.1:80/dvwa/includes/, 127.0.0.1:80/dvwa/images/, 127.0.0.1:80/dvwa///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////",
+      "Method": "GET",
+      "Description": "Directory indexing found.",
+      "References": "CWE-548"
+   },
+   {
+      "Scanner": "Nikto",
+      "Title": "OPTIONS: Allowed HTTP Methods: GET, HEAD, POST, OPTIONS .",
+      "Site URL": "127.0.0.1:80/dvwa/",
+      "Method": "OPTIONS",
+      "Description": "OPTIONS: Allowed HTTP Methods: GET, HEAD, POST, OPTIONS .",
+      "References": null
+   },
+   {
+      "Scanner": "Nikto",
+      "Title": "RFC-1918 IP address found in the 'location' header.",
+      "Site URL": "127.0.0.1:80/dvwa/images",
+      "Method": "GET",
+      "Description": "RFC-1918 IP address found in the 'location' header. The IP is \"172.17.0.2\".",
+      "References": "https://portswigger.net/kb/issues/00600300_private-ip-addresses-disclosed"
+   },
+   {
+      "Scanner": "Nikto",
+      "Title": "/images: The web server may reveal its internal or real IP in the Location header via a request to with HTTP/1.0.",
+      "Site URL": "127.0.0.1:80/dvwa/images",
+      "Method": "GET",
+      "Description": "/images: The web server may reveal its internal or real IP in the Location header via a request to with HTTP/1.0. The value is \"172.17.0.2\".",
+      "References": "CVE-2000-0649",
+      "CVE": "CVE-2000-0649"
+   },
+   {
+      "Scanner": "Nikto",
+      "Title": "Suggested security header missing: content-security-policy.",
+      "Site URL": "127.0.0.1:80/dvwa/",
+      "Method": "GET",
+      "Description": "Suggested security header missing: content-security-policy.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP"
+   },
+   {
+      "Scanner": "Nikto",
+      "Title": "Suggested security header missing: referrer-policy.",
+      "Site URL": "127.0.0.1:80/dvwa/",
+      "Method": "GET",
+      "Description": "Suggested security header missing: referrer-policy.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy"
+   },
+   {
+      "Scanner": "Nikto",
+      "Title": "Suggested security header missing: strict-transport-security.",
+      "Site URL": "127.0.0.1:80/dvwa/",
+      "Method": "GET",
+      "Description": "Suggested security header missing: strict-transport-security.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security"
+   },
+   {
+      "Scanner": "Nikto",
+      "Title": "Suggested security header missing: permissions-policy.",
+      "Site URL": "127.0.0.1:80/dvwa/",
+      "Method": "GET",
+      "Description": "Suggested security header missing: permissions-policy.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy"
+   },
+   {
+      "Scanner": "Nikto",
+      "Title": "Suggested security header missing: x-content-type-options.",
+      "Site URL": "127.0.0.1:80/dvwa/",
+      "Method": "GET",
+      "Description": "Suggested security header missing: x-content-type-options.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options"
+   },
+   {
+      "Scanner": "Nikto",
+      "Title": "Apache/2.4.25 appears to be outdated (current is at least 2.4.68).",
+      "Site URL": "127.0.0.1:80/dvwa/",
+      "Method": "HEAD",
+      "Description": "Apache/2.4.25 appears to be outdated (current is at least 2.4.68).",
+      "References": null
+   },
+   {
+      "Scanner": "Nikto",
+      "Title": "Appending '/./' to a directory allows indexing.",
+      "Site URL": "127.0.0.1:80/dvwa/./",
+      "Method": "GET",
+      "Description": "Appending '/./' to a directory allows indexing.",
+      "References": null
+   },
+   {
+      "Scanner": "Nikto",
+      "Title": "Apache on Red Hat Linux release 9 reveals the root directory listing by default if there is no index page.",
+      "Site URL": "127.0.0.1:80/dvwa//",
+      "Method": "GET",
+      "Description": "Apache on Red Hat Linux release 9 reveals the root directory listing by default if there is no index page.",
+      "References": null
+   },
+   {
+      "Scanner": "Nikto",
+      "Title": "Weblogic allows source code or directory listing, upgrade to v6.0 SP1 or higher.",
+      "Site URL": "127.0.0.1:80/dvwa/%2e/",
+      "Method": "GET",
+      "Description": "Weblogic allows source code or directory listing, upgrade to v6.0 SP1 or higher.",
+      "References": "https://web.archive.org/web/20171102042459/http://www.securityfocus.com/bid/2513"
+   },
+   {
+      "Scanner": "Nikto",
+      "Title": "The remote server may allow directory listings through Web Publisher by forcing the server to show all files via 'open directory browsing'.",
+      "Site URL": "127.0.0.1:80/dvwa/?PageServices, 127.0.0.1:80/dvwa/?wp-cs-dump",
+      "Method": "GET",
+      "Description": "The remote server may allow directory listings through Web Publisher by forcing the server to show all files via 'open directory browsing'. Web Publisher should be disabled.",
+      "References": "CVE-1999-0269",
+      "CVE": "CVE-1999-0269"
+   },
+   {
+      "Scanner": "Nikto",
+      "Title": "This might be interesting.",
+      "Site URL": "127.0.0.1:80/dvwa/css/, 127.0.0.1:80/dvwa/includes/",
+      "Method": "GET",
+      "Description": "This might be interesting.",
+      "References": null
+   },
+   {
+      "Scanner": "Nikto",
+      "Title": "Abyss 1.03 reveals directory listing when multiple /'s are requested.",
+      "Site URL": "127.0.0.1:80/dvwa///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////",
+      "Method": "GET",
+      "Description": "Abyss 1.03 reveals directory listing when multiple /'s are requested.",
+      "References": "CVE-2002-1078",
+      "CVE": "CVE-2002-1078"
+   },
+   {
+      "Scanner": "Nikto",
+      "Title": "Apache allows directory listings by requesting.",
+      "Site URL": "127.0.0.1:80/dvwa/?D=A, 127.0.0.1:80/dvwa/?N=D, 127.0.0.1:80/dvwa/?S=A",
+      "Method": "GET",
+      "Description": "Apache allows directory listings by requesting.",
+      "References": "CVE-2001-0731",
+      "CVE": "CVE-2001-0731"
+   },
+   {
+      "Scanner": "Nikto",
+      "Title": "Apache allows directory listings.",
+      "Site URL": "127.0.0.1:80/dvwa/?M=A",
+      "Method": "GET",
+      "Description": "Apache allows directory listings. Upgrade Apache or disable directory indexing.",
+      "References": "CVE-2001-0731",
+      "CVE": "CVE-2001-0731"
+   },
+   {
+      "Scanner": "Nikto",
+      "Title": "X-Frame-Options header is deprecated and was replaced with the Content-Security-Policy HTTP header with the frame-ancestors directive.",
+      "Site URL": "127.0.0.1:80/dvwa/",
+      "Method": "GET",
+      "Description": "X-Frame-Options header is deprecated and was replaced with the Content-Security-Policy HTTP header with the frame-ancestors directive.",
+      "References": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options"
+   },
+   {
+      "Scanner": "Nikto",
+      "Title": "The X-Content-Type-Options header is not set.",
+      "Site URL": "127.0.0.1:80/dvwa/",
+      "Method": "GET",
+      "Description": "The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type.",
+      "References": "https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/"
+   }
+]

@@ -302,7 +302,7 @@ def group_records(records: list, dedup: bool = True) -> list:
     return findings
 
 
-# ------------------------------------------------------------ CVSS / EPSS
+# CVSS / EPSS
 
 EPSS_BATCH = 80
 NVD_METRICS = (("cvssMetricV40", "4.0"), ("cvssMetricV31", "3.1"),

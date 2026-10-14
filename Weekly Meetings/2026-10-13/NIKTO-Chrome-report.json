@@ -1,0 +1,110 @@
+[
+   {
+      "end_time" : "2026-10-13 21:43:57 -0400",
+      "host" : "localhost",
+      "ip" : "127.0.0.1",
+      "port" : 80,
+      "server_banner" : null,
+      "start_time" : "2026-10-13 21:43:36 -0400",
+      "vulnerabilities" : [
+         {
+            "id" : "013587",
+            "method" : "GET",
+            "msg" : "Suggested security header missing: content-security-policy.",
+            "references" : "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP",
+            "url" : "/"
+         },
+         {
+            "id" : "013587",
+            "method" : "GET",
+            "msg" : "Suggested security header missing: strict-transport-security.",
+            "references" : "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security",
+            "url" : "/"
+         },
+         {
+            "id" : "013587",
+            "method" : "GET",
+            "msg" : "Suggested security header missing: permissions-policy.",
+            "references" : "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy",
+            "url" : "/"
+         },
+         {
+            "id" : "013587",
+            "method" : "GET",
+            "msg" : "Suggested security header missing: x-content-type-options.",
+            "references" : "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options",
+            "url" : "/"
+         },
+         {
+            "id" : "013587",
+            "method" : "GET",
+            "msg" : "Suggested security header missing: referrer-policy.",
+            "references" : "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy",
+            "url" : "/"
+         },
+         {
+            "id" : "600050",
+            "method" : "HEAD",
+            "msg" : "Apache/2.4.25 appears to be outdated (current is at least 2.4.68).",
+            "references" : "",
+            "url" : "/"
+         },
+         {
+            "id" : "750500",
+            "method" : "GET",
+            "msg" : "Directory indexing found.",
+            "references" : "CWE-548",
+            "url" : "/config/"
+         },
+         {
+            "id" : "000998",
+            "method" : "GET",
+            "msg" : "Configuration information may be available remotely.",
+            "references" : "",
+            "url" : "/config/"
+         },
+         {
+            "id" : "750500",
+            "method" : "GET",
+            "msg" : "Directory indexing found.",
+            "references" : "CWE-548",
+            "url" : "/docs/"
+         },
+         {
+            "id" : "003584",
+            "method" : "GET",
+            "msg" : "Apache default file found.",
+            "references" : "https://www.vntweb.co.uk/apache-restricting-access-to-iconsreadme/",
+            "url" : "/icons/README"
+         },
+         {
+            "id" : "006333",
+            "method" : "GET",
+            "msg" : "Admin login page/section found.",
+            "references" : "",
+            "url" : "/login.php"
+         },
+         {
+            "id" : "007224",
+            "method" : "GET",
+            "msg" : ".gitignore file found. It is possible to grasp the directory structure.",
+            "references" : "",
+            "url" : "/.gitignore"
+         },
+         {
+            "id" : "007342",
+            "method" : "GET",
+            "msg" : "X-Frame-Options header is deprecated and was replaced with the Content-Security-Policy HTTP header with the frame-ancestors directive.",
+            "references" : "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options",
+            "url" : "/"
+         },
+         {
+            "id" : "007352",
+            "method" : "GET",
+            "msg" : "The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type.",
+            "references" : "https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/",
+            "url" : "/"
+         }
+      ]
+   }
+]

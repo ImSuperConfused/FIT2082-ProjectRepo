@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Parse Nikto and/or OWASP ZAP JSON reports into one deduplicated JSON report.
+Parse OWASP ZAP JSON reports into one deduplicated JSON report.
 Every finding has the same fields, including ONE Score (0-10) and Severity.
 
 Score: CVSS (+ EPSS + exposure) if a CVE has a CVSS score (--scores),
@@ -46,7 +46,7 @@ CWE_MEDIUM = {"200", "256", "259", "311", "312", "319", "326", "327", "523",
               "614", "1004", "1275"}
 
 
-# ---------- helpers ----------
+#  helpers 
 
 def clean_html(value) -> str:
     return html.unescape(TAG_RE.sub("", BREAK_RE.sub("\n", str(value or "")))).strip()
@@ -76,7 +76,7 @@ def netloc(url: str) -> str:
     return urlsplit(normalise_url(url)).netloc if url else ""
 
 
-# ---------- parsing: one record per instance ----------
+#  parsing: one record per instance 
 
 def record(scanner, title, url, method, desc, refs, solution, risk, confidence, cwe, key):
     return {"scanner": scanner, "title": title, "url": url, "method": (method or "").upper(),
@@ -139,7 +139,7 @@ def parse_file(path: str) -> list:
     return records
 
 
-# ---------- deduplication ----------
+#  deduplication 
 
 def group(records: list) -> list:
     """Merge records with the same key into one group, keeping the worst instance."""
@@ -156,7 +156,7 @@ def group(records: list) -> list:
     return list(groups.values())
 
 
-# ---------- CVSS / EPSS (optional) ----------
+#  CVSS / EPSS (optional) 
 
 def get_json(url: str, headers: dict = None):
     request = urllib.request.Request(url, headers={"User-Agent": "ScanParser", **(headers or {})})
@@ -194,7 +194,7 @@ def lookup_all(cves, api_key: str = None) -> dict:
     return results
 
 
-# ---------- scoring ----------
+#  scoring 
 
 def score(grp: dict, cve_data: dict) -> float:
     best = grp["best"]
@@ -238,7 +238,7 @@ def build_findings(groups: list, cve_data: dict) -> list:
     return sorted(findings, key=lambda f: f["Score"], reverse=True)
 
 
-# ---------- main ----------
+#  main 
 
 def main() -> int:
     cli = argparse.ArgumentParser(description="Parse Nikto / OWASP ZAP JSON reports into one "

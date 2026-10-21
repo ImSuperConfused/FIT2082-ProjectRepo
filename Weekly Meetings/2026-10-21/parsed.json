@@ -1,34 +1,9 @@
 [
    {
       "ID": 1,
-      "Title": "Cookie without SameSite Attribute",
-      "Severity": "Low",
-      "Confidence": "Medium",
-      "Scanners": [
-         "ZAP"
-      ],
-      "Affected": [
-         {
-            "url": "http://127.0.0.1:4280/security.php",
-            "method": "GET"
-         }
-      ],
-      "Description": "A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.",
-      "Solution": "Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.",
-      "CVE": [],
-      "CWE": [
-         "CWE-1275"
-      ],
-      "References": [
-         "https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-same-site"
-      ],
-      "Also Reported As": [],
-      "Composite Score": 2.5
-   },
-   {
-      "ID": 2,
       "Title": "Content Security Policy (CSP) Header Not Set",
       "Severity": "Medium",
+      "Severity Source": "ZAP",
       "Confidence": "High",
       "Scanners": [
          "Nikto",
@@ -36,7 +11,7 @@
       ],
       "Affected": [
          {
-            "url": "localhost:80/",
+            "url": "http://localhost:80/",
             "method": "GET"
          },
          {
@@ -74,9 +49,85 @@
       "Composite Score": 0.10585
    },
    {
+      "ID": 2,
+      "Title": "Apache/2.4.25 appears to be outdated (current is at least 2.4.68).",
+      "Severity": "Medium",
+      "Severity Source": "Nikto keyword rules",
+      "Confidence": null,
+      "Scanners": [
+         "Nikto"
+      ],
+      "Affected": [
+         {
+            "url": "http://localhost:80/",
+            "method": "HEAD"
+         }
+      ],
+      "Description": "Apache/2.4.25 appears to be outdated (current is at least 2.4.68).",
+      "Solution": null,
+      "CVE": [],
+      "CWE": [],
+      "References": [],
+      "Also Reported As": [],
+      "Composite Score": null
+   },
+   {
       "ID": 3,
-      "Title": "X-Content-Type-Options Header Missing",
-      "Severity": "Low",
+      "Title": "Directory indexing found.",
+      "Severity": "Medium",
+      "Severity Source": "Nikto keyword rules",
+      "Confidence": null,
+      "Scanners": [
+         "Nikto"
+      ],
+      "Affected": [
+         {
+            "url": "http://localhost:80/config/",
+            "method": "GET"
+         },
+         {
+            "url": "http://localhost:80/docs/",
+            "method": "GET"
+         }
+      ],
+      "Description": "Directory indexing found.",
+      "Solution": null,
+      "CVE": [],
+      "CWE": [
+         "CWE-548"
+      ],
+      "References": [],
+      "Also Reported As": [],
+      "Composite Score": null
+   },
+   {
+      "ID": 4,
+      "Title": "Configuration information may be available remotely.",
+      "Severity": "Medium",
+      "Severity Source": "Nikto keyword rules",
+      "Confidence": null,
+      "Scanners": [
+         "Nikto"
+      ],
+      "Affected": [
+         {
+            "url": "http://localhost:80/config/",
+            "method": "GET"
+         }
+      ],
+      "Description": "Configuration information may be available remotely.",
+      "Solution": null,
+      "CVE": [],
+      "CWE": [],
+      "References": [],
+      "Also Reported As": [],
+      "Composite Score": null
+   },
+   {
+      "ID": 5,
+      "Title": "Missing Anti-clickjacking Header",
+      "Severity": "Medium",
+      "Severity Source": "ZAP",
       "Confidence": "Medium",
       "Scanners": [
          "Nikto",
@@ -84,7 +135,45 @@
       ],
       "Affected": [
          {
-            "url": "localhost:80/",
+            "url": "http://localhost:80/",
+            "method": "GET"
+         },
+         {
+            "url": "http://127.0.0.1:4280/login.php",
+            "method": "GET"
+         },
+         {
+            "url": "http://127.0.0.1:4280/security.php",
+            "method": "GET"
+         }
+      ],
+      "Description": "The response does not protect against 'ClickJacking' attacks. It should include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options.",
+      "Solution": "Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.\nIf you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's \"frame-ancestors\" directive.",
+      "CVE": [],
+      "CWE": [
+         "CWE-1021"
+      ],
+      "References": [
+         "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options"
+      ],
+      "Also Reported As": [
+         "X-Frame-Options header is deprecated and was replaced with the Content-Security-Policy HTTP header with the frame-ancestors directive."
+      ],
+      "Composite Score": 5.0
+   },
+   {
+      "ID": 6,
+      "Title": "X-Content-Type-Options Header Missing",
+      "Severity": "Low",
+      "Severity Source": "ZAP",
+      "Confidence": "Medium",
+      "Scanners": [
+         "Nikto",
+         "ZAP"
+      ],
+      "Affected": [
+         {
+            "url": "http://localhost:80/",
             "method": "GET"
          },
          {
@@ -127,46 +216,183 @@
       "Composite Score": 0.10585
    },
    {
-      "ID": 4,
-      "Title": "Missing Anti-clickjacking Header",
-      "Severity": "Medium",
-      "Confidence": "Medium",
+      "ID": 7,
+      "Title": "Suggested security header missing: strict-transport-security.",
+      "Severity": "Low",
+      "Severity Source": "Nikto keyword rules",
+      "Confidence": null,
       "Scanners": [
-         "Nikto",
-         "ZAP"
+         "Nikto"
       ],
       "Affected": [
          {
-            "url": "localhost:80/",
+            "url": "http://localhost:80/",
             "method": "GET"
-         },
+         }
+      ],
+      "Description": "Suggested security header missing: strict-transport-security.",
+      "Solution": null,
+      "CVE": [],
+      "CWE": [],
+      "References": [
+         "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security"
+      ],
+      "Also Reported As": [],
+      "Composite Score": null
+   },
+   {
+      "ID": 8,
+      "Title": "Suggested security header missing: permissions-policy.",
+      "Severity": "Low",
+      "Severity Source": "Nikto keyword rules",
+      "Confidence": null,
+      "Scanners": [
+         "Nikto"
+      ],
+      "Affected": [
          {
-            "url": "http://127.0.0.1:4280/login.php",
+            "url": "http://localhost:80/",
             "method": "GET"
-         },
+         }
+      ],
+      "Description": "Suggested security header missing: permissions-policy.",
+      "Solution": null,
+      "CVE": [],
+      "CWE": [],
+      "References": [
+         "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy"
+      ],
+      "Also Reported As": [],
+      "Composite Score": null
+   },
+   {
+      "ID": 9,
+      "Title": "Suggested security header missing: referrer-policy.",
+      "Severity": "Low",
+      "Severity Source": "Nikto keyword rules",
+      "Confidence": null,
+      "Scanners": [
+         "Nikto"
+      ],
+      "Affected": [
+         {
+            "url": "http://localhost:80/",
+            "method": "GET"
+         }
+      ],
+      "Description": "Suggested security header missing: referrer-policy.",
+      "Solution": null,
+      "CVE": [],
+      "CWE": [],
+      "References": [
+         "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy"
+      ],
+      "Also Reported As": [],
+      "Composite Score": null
+   },
+   {
+      "ID": 10,
+      "Title": "Apache default file found.",
+      "Severity": "Low",
+      "Severity Source": "Nikto keyword rules",
+      "Confidence": null,
+      "Scanners": [
+         "Nikto"
+      ],
+      "Affected": [
+         {
+            "url": "http://localhost:80/icons/README",
+            "method": "GET"
+         }
+      ],
+      "Description": "Apache default file found.",
+      "Solution": null,
+      "CVE": [],
+      "CWE": [],
+      "References": [
+         "https://www.vntweb.co.uk/apache-restricting-access-to-iconsreadme/"
+      ],
+      "Also Reported As": [],
+      "Composite Score": null
+   },
+   {
+      "ID": 11,
+      "Title": "Admin login page/section found.",
+      "Severity": "Low",
+      "Severity Source": "Nikto keyword rules",
+      "Confidence": null,
+      "Scanners": [
+         "Nikto"
+      ],
+      "Affected": [
+         {
+            "url": "http://localhost:80/login.php",
+            "method": "GET"
+         }
+      ],
+      "Description": "Admin login page/section found.",
+      "Solution": null,
+      "CVE": [],
+      "CWE": [],
+      "References": [],
+      "Also Reported As": [],
+      "Composite Score": null
+   },
+   {
+      "ID": 12,
+      "Title": ".gitignore file found.",
+      "Severity": "Low",
+      "Severity Source": "Nikto keyword rules",
+      "Confidence": null,
+      "Scanners": [
+         "Nikto"
+      ],
+      "Affected": [
+         {
+            "url": "http://localhost:80/.gitignore",
+            "method": "GET"
+         }
+      ],
+      "Description": ".gitignore file found. It is possible to grasp the directory structure.",
+      "Solution": null,
+      "CVE": [],
+      "CWE": [],
+      "References": [],
+      "Also Reported As": [],
+      "Composite Score": null
+   },
+   {
+      "ID": 13,
+      "Title": "Cookie without SameSite Attribute",
+      "Severity": "Low",
+      "Severity Source": "ZAP",
+      "Confidence": "Medium",
+      "Scanners": [
+         "ZAP"
+      ],
+      "Affected": [
          {
             "url": "http://127.0.0.1:4280/security.php",
             "method": "GET"
          }
       ],
-      "Description": "The response does not protect against 'ClickJacking' attacks. It should include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options.",
-      "Solution": "Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.\nIf you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's \"frame-ancestors\" directive.",
+      "Description": "A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.",
+      "Solution": "Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.",
       "CVE": [],
       "CWE": [
-         "CWE-1021"
+         "CWE-1275"
       ],
       "References": [
-         "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options"
+         "https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-same-site"
       ],
-      "Also Reported As": [
-         "X-Frame-Options header is deprecated and was replaced with the Content-Security-Policy HTTP header with the frame-ancestors directive."
-      ],
-      "Composite Score": 0.04938
+      "Also Reported As": [],
+      "Composite Score": 2.5
    },
    {
-      "ID": 5,
+      "ID": 14,
       "Title": "In Page Banner Information Leak",
       "Severity": "Low",
+      "Severity Source": "ZAP",
       "Confidence": "High",
       "Scanners": [
          "ZAP"
@@ -187,13 +413,14 @@
          "https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/"
       ],
       "Also Reported As": [],
-      "Composite Score": 0.01426
+      "Composite Score": 2.5
    },
    {
-      "ID": 6,
-      "Title": "Server Leaks Version Information via \"Server\" HTTP Response Header Field",
+      "ID": 15,
+      "Title": "Server Leaks Information via \"X-Powered-By\" HTTP Response Header Field(s)",
       "Severity": "Low",
-      "Confidence": "High",
+      "Severity Source": "ZAP",
+      "Confidence": "Medium",
       "Scanners": [
          "ZAP"
       ],
@@ -213,6 +440,34 @@
          {
             "url": "http://127.0.0.1:4280/login.php",
             "method": "POST"
+         }
+      ],
+      "Description": "The web/application server is leaking information via one or more \"X-Powered-By\" HTTP response headers. Access to such information may facilitate attackers identifying other frameworks/components your web application is reliant upon and the vulnerabilities such components may be subject to.",
+      "Solution": "Ensure that your web server, application server, load balancer, etc. is configured to suppress \"X-Powered-By\" headers.",
+      "CVE": [],
+      "CWE": [
+         "CWE-497"
+      ],
+      "References": [
+         "https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework",
+         "https://www.troyhunt.com/shhh-dont-let-your-response-headers/"
+      ],
+      "Also Reported As": [],
+      "Composite Score": 2.5
+   },
+   {
+      "ID": 16,
+      "Title": "Server Leaks Version Information via \"Server\" HTTP Response Header Field",
+      "Severity": "Low",
+      "Severity Source": "ZAP",
+      "Confidence": "High",
+      "Scanners": [
+         "ZAP"
+      ],
+      "Affected": [
+         {
+            "url": "http://127.0.0.1:4280/",
+            "method": "GET"
          },
          {
             "url": "http://127.0.0.1:4280/dvwa/css/login.css",
@@ -225,29 +480,31 @@
          {
             "url": "http://127.0.0.1:4280/robots.txt",
             "method": "GET"
+         },
+         {
+            "url": "http://127.0.0.1:4280/login.php",
+            "method": "POST"
          }
       ],
-      "Description": "The web/application server is leaking information via one or more \"X-Powered-By\" HTTP response headers. Access to such information may facilitate attackers identifying other frameworks/components your web application is reliant upon and the vulnerabilities such components may be subject to.",
-      "Solution": "Ensure that your web server, application server, load balancer, etc. is configured to suppress \"X-Powered-By\" headers.",
+      "Description": "The web/application server is leaking version information via the \"Server\" HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.",
+      "Solution": "Ensure that your web server, application server, load balancer, etc. is configured to suppress the \"Server\" header or provide generic details.",
       "CVE": [],
       "CWE": [
          "CWE-497"
       ],
       "References": [
-         "https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework",
-         "https://www.troyhunt.com/shhh-dont-let-your-response-headers/",
          "https://httpd.apache.org/docs/current/mod/core.html#servertokens",
-         "https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552(v=pandp.10)"
+         "https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552(v=pandp.10)",
+         "https://www.troyhunt.com/shhh-dont-let-your-response-headers/"
       ],
-      "Also Reported As": [
-         "Server Leaks Information via \"X-Powered-By\" HTTP Response Header Field(s)"
-      ],
-      "Composite Score": 0.01426
+      "Also Reported As": [],
+      "Composite Score": 2.5
    },
    {
-      "ID": 7,
+      "ID": 17,
       "Title": "Authentication Request Identified",
       "Severity": "Informational",
+      "Severity Source": "ZAP",
       "Confidence": "High",
       "Scanners": [
          "ZAP"
@@ -269,9 +526,10 @@
       "Composite Score": 0.0
    },
    {
-      "ID": 8,
+      "ID": 18,
       "Title": "Session Management Response Identified",
       "Severity": "Informational",
+      "Severity Source": "ZAP",
       "Confidence": "Medium",
       "Scanners": [
          "ZAP"
@@ -297,9 +555,10 @@
       "Composite Score": 0.0
    },
    {
-      "ID": 9,
+      "ID": 19,
       "Title": "User Agent Fuzzer",
       "Severity": "Informational",
+      "Severity Source": "ZAP",
       "Confidence": "Medium",
       "Scanners": [
          "ZAP"
@@ -319,217 +578,5 @@
       ],
       "Also Reported As": [],
       "Composite Score": 0.0
-   },
-   {
-      "ID": 10,
-      "Title": "Suggested security header missing: strict-transport-security.",
-      "Severity": null,
-      "Confidence": null,
-      "Scanners": [
-         "Nikto"
-      ],
-      "Affected": [
-         {
-            "url": "localhost:80/",
-            "method": "GET"
-         }
-      ],
-      "Description": "Suggested security header missing: strict-transport-security.",
-      "Solution": null,
-      "CVE": [],
-      "CWE": [],
-      "References": [
-         "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security"
-      ],
-      "Also Reported As": [],
-      "Composite Score": null
-   },
-   {
-      "ID": 11,
-      "Title": "Suggested security header missing: permissions-policy.",
-      "Severity": null,
-      "Confidence": null,
-      "Scanners": [
-         "Nikto"
-      ],
-      "Affected": [
-         {
-            "url": "localhost:80/",
-            "method": "GET"
-         }
-      ],
-      "Description": "Suggested security header missing: permissions-policy.",
-      "Solution": null,
-      "CVE": [],
-      "CWE": [],
-      "References": [
-         "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy"
-      ],
-      "Also Reported As": [],
-      "Composite Score": null
-   },
-   {
-      "ID": 12,
-      "Title": "Suggested security header missing: referrer-policy.",
-      "Severity": null,
-      "Confidence": null,
-      "Scanners": [
-         "Nikto"
-      ],
-      "Affected": [
-         {
-            "url": "localhost:80/",
-            "method": "GET"
-         }
-      ],
-      "Description": "Suggested security header missing: referrer-policy.",
-      "Solution": null,
-      "CVE": [],
-      "CWE": [],
-      "References": [
-         "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy"
-      ],
-      "Also Reported As": [],
-      "Composite Score": null
-   },
-   {
-      "ID": 13,
-      "Title": "Apache/2.4.25 appears to be outdated (current is at least 2.4.68).",
-      "Severity": null,
-      "Confidence": null,
-      "Scanners": [
-         "Nikto"
-      ],
-      "Affected": [
-         {
-            "url": "localhost:80/",
-            "method": "HEAD"
-         }
-      ],
-      "Description": "Apache/2.4.25 appears to be outdated (current is at least 2.4.68).",
-      "Solution": null,
-      "CVE": [],
-      "CWE": [],
-      "References": [],
-      "Also Reported As": [],
-      "Composite Score": null
-   },
-   {
-      "ID": 14,
-      "Title": "Directory indexing found.",
-      "Severity": null,
-      "Confidence": null,
-      "Scanners": [
-         "Nikto"
-      ],
-      "Affected": [
-         {
-            "url": "localhost:80/config/",
-            "method": "GET"
-         },
-         {
-            "url": "localhost:80/docs/",
-            "method": "GET"
-         }
-      ],
-      "Description": "Directory indexing found.",
-      "Solution": null,
-      "CVE": [],
-      "CWE": [
-         "CWE-548"
-      ],
-      "References": [],
-      "Also Reported As": [],
-      "Composite Score": null
-   },
-   {
-      "ID": 15,
-      "Title": "Configuration information may be available remotely.",
-      "Severity": null,
-      "Confidence": null,
-      "Scanners": [
-         "Nikto"
-      ],
-      "Affected": [
-         {
-            "url": "localhost:80/config/",
-            "method": "GET"
-         }
-      ],
-      "Description": "Configuration information may be available remotely.",
-      "Solution": null,
-      "CVE": [],
-      "CWE": [],
-      "References": [],
-      "Also Reported As": [],
-      "Composite Score": null
-   },
-   {
-      "ID": 16,
-      "Title": "Apache default file found.",
-      "Severity": null,
-      "Confidence": null,
-      "Scanners": [
-         "Nikto"
-      ],
-      "Affected": [
-         {
-            "url": "localhost:80/icons/README",
-            "method": "GET"
-         }
-      ],
-      "Description": "Apache default file found.",
-      "Solution": null,
-      "CVE": [],
-      "CWE": [],
-      "References": [
-         "https://www.vntweb.co.uk/apache-restricting-access-to-iconsreadme/"
-      ],
-      "Also Reported As": [],
-      "Composite Score": null
-   },
-   {
-      "ID": 17,
-      "Title": "Admin login page/section found.",
-      "Severity": null,
-      "Confidence": null,
-      "Scanners": [
-         "Nikto"
-      ],
-      "Affected": [
-         {
-            "url": "localhost:80/login.php",
-            "method": "GET"
-         }
-      ],
-      "Description": "Admin login page/section found.",
-      "Solution": null,
-      "CVE": [],
-      "CWE": [],
-      "References": [],
-      "Also Reported As": [],
-      "Composite Score": null
-   },
-   {
-      "ID": 18,
-      "Title": ".gitignore file found.",
-      "Severity": null,
-      "Confidence": null,
-      "Scanners": [
-         "Nikto"
-      ],
-      "Affected": [
-         {
-            "url": "localhost:80/.gitignore",
-            "method": "GET"
-         }
-      ],
-      "Description": ".gitignore file found. It is possible to grasp the directory structure.",
-      "Solution": null,
-      "CVE": [],
-      "CWE": [],
-      "References": [],
-      "Also Reported As": [],
-      "Composite Score": null
    }
 ]

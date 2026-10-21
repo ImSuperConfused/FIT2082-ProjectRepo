@@ -11,17 +11,29 @@ Usage:
 The extension of the -o file picks the output format (.json or .pdf). Any other extension is an error.
 
 Findings are processed in four steps:
-  1. Merge within each scanner: findings that share at least one reference (links are separated by whitespace),
-     or that report the same missing security header, become one.
-  2. Merge between scanners: merged findings of different scanners that share at least one reference, or that
-     report the same missing security header, become one.
+  1. Merge within each scanner. ZAP alerts are merged when they have the same title (ZAP gives every alert type its
+     own title, so two different alerts that merely share a reference link stay separate). Nikto has no alert
+     titles, so Nikto findings are merged when they have the same title or share a reference link. For both
+     scanners, findings about the same missing security header are also merged.
+  2. Merge between scanners. Merged findings of different scanners become one when they share a reference link or
+     report the same missing security header. Two safeguards apply: a merged finding never contains two findings
+     of the same scanner, and a link only merges two findings if their CWE IDs do not contradict each other
+     (a finding without a CWE never contradicts).
   3. Score what is left (Composite Score, below).
-  4. Sort. Findings are sorted by Composite Score from 10 down to 0, with unscored findings last. Ties keep a fixed order.
+  4. Sort. Findings are sorted by severity first (High, Medium, Low, Informational), with unrated findings last.
+     Within the same severity, findings with a real EPSS * CVSS Composite Score come before findings that only
+     have the risk fallback (or no score), and real scores go from high to low.
+     Ties keep a fixed order (the order the findings were merged in).
+
+Severity comes from ZAP's risk label. A finding with no ZAP alert (Nikto only) gets an estimated severity from
+simple keyword rules (NIKTO_SEVERITY_RULES); if no rule matches it stays unrated.
 
 Each finding in the output has these fields:
-  ID                 position after sorting (1 = highest score)
+  ID                 position after sorting (1 = highest priority)
   Title              the shortest of the merged titles (the others are listed under "Also Reported As")
-  Severity           ZAP's risk label (Informational, Low, Medium, High); null if no ZAP alert is part of the finding
+  Severity           ZAP's risk label (Informational, Low, Medium, High); for Nikto-only findings the keyword-rule
+                     estimate; null if neither exists
+  Severity Source    "ZAP", "Nikto keyword rules", or null
   Confidence         ZAP's confidence label; null if no ZAP alert is part of the finding
   Scanners           the scanners that found it
   Affected           one {url, method} pair per place it was found
@@ -30,12 +42,14 @@ Each finding in the output has these fields:
   CVE, CWE           IDs found in the finding (each a list)
   References         links (CVE and CWE IDs are in their own fields)
   Also Reported As   the other titles the scanners gave this finding
-  Composite Score    EPSS * CVSS (see below), or null if it could not be scored
+  Composite Score    EPSS * CVSS (see below), or the ZAP risk fallback, or null if it could not be scored
 
 Composite Score = EPSS * CVSS (needs internet access; set the NVD_API_KEY environment variable to speed it up):
   - A finding that references a CVE uses the CVSS score (from NVD) and EPSS score (from FIRST) of that CVE.
   - A finding that references only a CWE uses the average CVSS and EPSS of the CVEs NVD lists for that CWE.
   - If no such score can be found, a ZAP finding gets its own risk code (0 to 3) * 2.5, and any other finding gets null.
+  - The fallback value lives on a different scale from EPSS * CVSS, so the two are never compared with each other
+    when sorting (see step 4 above).
 """
 
 # Score using any CVE/CWE references to CVSS.
@@ -64,6 +78,20 @@ ZAP_RISK_WEIGHT: float = 2.5   # A ZAP finding that could not be scored gets its
 # ZAP's numeric codes as the labels shown in the output
 SEVERITY_NAMES = {0: "Informational", 1: "Low", 2: "Medium", 3: "High"}
 CONFIDENCE_NAMES = {0: "False Positive", 1: "Low", 2: "Medium", 3: "High", 4: "Confirmed"}
+
+# Scanners whose findings have no stable alert title, so findings that share a reference link are also merged
+# within the scanner. ZAP is not listed because every ZAP alert type has its own title.
+LINK_MERGE_SCANNERS = ("Nikto",)
+
+# Estimated severity (same 0 to 3 codes as ZAP's risk) for findings that no ZAP alert rates, checked from the highest
+# severity down. A rule matches when any of its keywords appears (lowercase) in a title or description of the finding.
+# The first matching rule wins. Findings that match nothing stay unrated. Edit these to suit your own judgement.
+NIKTO_SEVERITY_RULES = (
+    (3, ("remote code execution", "sql injection", "backdoor", "remote file inclusion", "default credentials",
+         "default password")),
+    (2, ("directory indexing", "configuration information", "outdated", "phpinfo", "backup file")),
+    (1, ("admin login", ".gitignore", "default file", "suggested security header missing", "header is not set")),
+)
 
 PDF_CHARS: int = 100   # Characters per line in a PDF (Courier 8 pt on an A4 page)
 PDF_LINES: int = 75    # Lines per PDF page
@@ -442,15 +470,26 @@ def header_keys(record: dict) -> list:
     return keys
 
 
-def merge_records(records: list, by_title: bool) -> list:
+def merge_records(records: list, within_scanner: bool) -> list:
     """
-    Input: Records (see merge_and_score), and by_title: whether records with no references are merged when they share a title.
-    Output: The records, where every group of records that share at least one reference (or the same missing security
-            header, see header_keys) is merged into one record.
-            A chain counts: if A shares a reference with B, and B with C, then A, B and C are merged.
+    Input: Records (see merge_and_score), and within_scanner: True when every record comes from the same scanner
+           (step 1), False when records of different scanners are merged (step 2).
+    Output: The records, where every group of records that share a merge key is merged into one record.
+            A chain counts: if A shares a key with B, and B with C, then A, B and C are merged.
+
+            Merge keys:
+              within one scanner: the same missing security header, the same title, and (only for scanners in
+                                  LINK_MERGE_SCANNERS) the same reference link
+              between scanners:   the same missing security header, or the same reference link
+
+            Between scanners, a join is refused when it would put two records of the same scanner in one group, and
+            a link join is also refused when both groups have CWE IDs and none of them is the same. This stops one
+            shared reference page from gluing together different alerts.
     """
-    # Union-find: every record starts in its own group, and records that share a reference are joined into one group
+    # Union-find: every record starts in its own group, and records that share a key are joined into one group
     parent = list(range(len(records)))
+    group_scanners = [set(record["scanners"]) for record in records]   # per group root: scanners in the group
+    group_cwes = [set(record["cwes"]) for record in records]           # per group root: CWE IDs in the group
 
     def find(index: int) -> int:
         # Follow the parents up to the root of the group, shortening the path on the way
@@ -460,21 +499,42 @@ def merge_records(records: list, by_title: bool) -> list:
 
         return index
 
-    first_seen: dict = {}  # reference or key -> the first record that had it
+    def join(first: int, second: int, kind: str) -> None:
+        # Join the groups of two records unless the safeguards (between scanners only) refuse it
+        root_a, root_b = find(first), find(second)
+
+        if root_a == root_b:
+            return
+
+        if not within_scanner:
+            if group_scanners[root_a] & group_scanners[root_b]:
+                return
+
+            if kind == "link" and group_cwes[root_a] and group_cwes[root_b] and not (group_cwes[root_a] & group_cwes[root_b]):
+                return
+
+        parent[root_b] = root_a
+        group_scanners[root_a] |= group_scanners[root_b]
+        group_cwes[root_a] |= group_cwes[root_b]
+
+    first_seen: dict = {}  # merge key -> the first record that had it
 
     for index, record in enumerate(records):
-        # Records share a reference link or a header name. Without any links, records with the same title also
-        # count as sharing one (only when by_title is True).
-        shared = list(record["links"]) + header_keys(record)
+        keys = header_keys(record)
 
-        if not record["links"] and by_title:
-            shared += [("title", title) for title in record["titles"]]
+        if within_scanner:
+            keys += [("title", " ".join(title.lower().split())) for title in record["titles"]]
 
-        for reference in shared:
-            if reference in first_seen:
-                parent[find(index)] = find(first_seen[reference])
+            if any(scanner in LINK_MERGE_SCANNERS for scanner in record["scanners"]):
+                keys += [("link", link) for link in record["links"]]
+        else:
+            keys += [("link", link) for link in record["links"]]
+
+        for key in keys:
+            if key in first_seen:
+                join(index, first_seen[key], key[0])
             else:
-                first_seen[reference] = index
+                first_seen[key] = index
 
     # Hash-map: group root -> the merged record
     merged: dict = {}
@@ -500,11 +560,30 @@ def merge_records(records: list, by_title: bool) -> list:
     return list(merged.values())
 
 
+def estimate_risk(record: dict):
+    """
+    Input: A merged record that has no ZAP risk.
+    Output: An estimated risk code (0 to 3) from NIKTO_SEVERITY_RULES, or None if no rule matches.
+    """
+    text = " ".join(list(record["titles"]) + list(record["descriptions"])).lower()
+
+    for risk, keywords in NIKTO_SEVERITY_RULES:
+        if any(keyword in text for keyword in keywords):
+            return risk
+
+    return None
+
+
 def score_records(records: list) -> list:
     """
     Input: Merged records (see merge_records).
-    Output: A list of (Composite Score, finding), one per record. The finding has the fields listed at the top of this
-            file (without the ID, which is given after sorting).
+    Output: A list of (rank key, finding), one per record. The finding has the fields listed at the top of this
+            file (without the ID, which is given after sorting). The rank key is a tuple that sorts ascending:
+              1. severity, highest first (ZAP's risk, else the keyword-rule estimate, unrated findings last)
+              2. whether the finding has NO real EPSS * CVSS score (False sorts first, so real scores come first)
+              3. the real EPSS * CVSS score, highest first
+            The risk fallback value is only written to the output and is never used for sorting, because it is on a
+            different scale from EPSS * CVSS.
     """
     # A finding with a CVE is scored by that CVE. Only a finding with a CWE and no CVE is scored by its CWE.
     unique_cves: set = set()
@@ -532,21 +611,34 @@ def score_records(records: list) -> list:
         top_cvss = max((s for s in scored if s["cvss"] is not None), key=lambda s: s["cvss"], default={})
         top_epss = max((s for s in scored if s["epss"] is not None), key=lambda s: s["epss"], default={})
 
-        # The Composite Score needs both scores
-        composite = round(top_cvss["cvss"] * top_epss["epss"], 5) if top_cvss and top_epss else None
+        # The real Composite Score needs both scores
+        real_score = round(top_cvss["cvss"] * top_epss["epss"], 5) if top_cvss and top_epss else None
+        zap_risk = record["fallback"].get("ZAP Risk")
+        composite = real_score
 
         if composite is None:
             # No CVE/CWE score could be found: a ZAP finding is scored by its own risk code, anything else gets NO_SCORE
-            risk = record["fallback"].get("ZAP Risk")
-            composite = risk * ZAP_RISK_WEIGHT if risk is not None else NO_SCORE
+            composite = zap_risk * ZAP_RISK_WEIGHT if zap_risk is not None else NO_SCORE
+
+        # Severity: ZAP's own risk if a ZAP alert is part of the finding, otherwise the keyword-rule estimate
+        if zap_risk is not None:
+            risk, severity_source = zap_risk, "ZAP"
+        else:
+            risk = estimate_risk(record)
+            severity_source = "Nikto keyword rules" if risk is not None else None
+
+        # Sort key: severity first (unrated findings last), then real scores before fallback/unscored ones,
+        # then the real score from high to low. The fallback value is never compared with real EPSS * CVSS scores.
+        rank_key = (-(risk if risk is not None else -1), real_score is None, -(real_score or 0.0))
 
         titles = list(record["titles"])
         descriptions = list(record["descriptions"])
         title = min(titles, key=len) if titles else None   # the shortest title is usually the clearest
 
-        results.append((composite, {
+        results.append((rank_key, {
             "Title": title,
-            "Severity": SEVERITY_NAMES.get(record["fallback"].get("ZAP Risk")),
+            "Severity": SEVERITY_NAMES.get(risk),
+            "Severity Source": severity_source,
             "Confidence": CONFIDENCE_NAMES.get(record["fallback"].get("ZAP Confidence")),
             "Scanners": list(record["scanners"]),
             "Affected": [{"url": url, "method": method} for url, method in record["affected"]],
@@ -568,10 +660,10 @@ def merge_and_score(items: list) -> list:
     Input: The raw findings of every report, each a dict with: scanner, title, url, method, description, solution,
            references, cves, cwes and fallback (the scanner's own ratings, used when no CVSS/EPSS score can be worked out).
     Output: Findings in the unified format (see the top of this file), made in four steps:
-            1. Merge within each scanner (findings that share at least one reference or missing header, or with no references a title).
-            2. Merge between scanners (the merged findings that share at least one reference or missing header).
+            1. Merge within each scanner (see merge_records).
+            2. Merge between scanners (see merge_records).
             3. Score what is left (see score_records).
-            4. Sort, highest Composite Score first and unscored last, and give every finding its ID (its position).
+            4. Sort by severity, then by real Composite Score (see score_records), and give every finding its ID (its position).
     """
     # 1. Merge within each scanner (a scanner's findings from several report files are merged together too)
     by_scanner: dict = {}
@@ -595,23 +687,23 @@ def merge_and_score(items: list) -> list:
     records: list = []
 
     for scanner, scanner_records in by_scanner.items():
-        merged = merge_records(scanner_records, by_title=True)
+        merged = merge_records(scanner_records, within_scanner=True)
         print(f"[+] {scanner}: {len(scanner_records)} raw, {len(merged)} unique, {len(scanner_records) - len(merged)} duplicate(s) merged", file=sys.stderr)
         records.extend(merged)
 
-    # 2. Merge between scanners (after step 1 only findings of different scanners can still share a reference or header)
+    # 2. Merge between scanners (after step 1 only findings of different scanners can still share a link or header)
     if len(by_scanner) > 1:
         before = len(records)
-        records = merge_records(records, by_title=False)
+        records = merge_records(records, within_scanner=False)
         print(f"[+] Between scanners: {before} unique, {len(records)} after merging, {before - len(records)} duplicate(s) merged", file=sys.stderr)
 
-    # 3. Score the merged findings: a list of (Composite Score, finding)
+    # 3. Score the merged findings: a list of (rank key, finding)
     scored = score_records(records)
 
-    # 4. Sort from the highest Composite Score (10) down to the lowest (0), with unscored (NO_SCORE) last. The position
-    #    before sorting breaks ties between equal scores, so the order is always the same. Then number the findings.
-    ranked = [(score, number, finding) for number, (score, finding) in enumerate(scored, start=1)]
-    ranked.sort(key=lambda entry: (-entry[0], entry[1]))
+    # 4. Sort by the rank key (severity, then real score). The position before sorting breaks ties between equal
+    #    keys, so the order is always the same. Then number the findings.
+    ranked = [(key, number, finding) for number, (key, finding) in enumerate(scored, start=1)]
+    ranked.sort(key=lambda entry: (entry[0], entry[1]))
 
     return [{"ID": rank, **finding} for rank, (_, _, finding) in enumerate(ranked, start=1)]
 
@@ -624,10 +716,13 @@ def parse_nikto(reports: list) -> list:
     items: list = []
 
     for report in reports:
-        # Base URL = host:port (falls back to ip when there is no host)
+        # Base URL = host:port (falls back to ip when there is no host), with a scheme so it matches ZAP's URLs
         host = report.get("host") or report.get("ip") or ""
         port = report.get("port")
         base = f"{host}:{port}" if host and port else host
+
+        if base and "://" not in base:
+            base = f"{'https' if str(port) == '443' else 'http'}://{base}"
 
         for vuln in report.get("vulnerabilities") or []:
             msg = vuln.get("msg") or ""
@@ -654,7 +749,8 @@ def parse_zap(reports: list) -> list:
     """
     Input: List of loaded OWASP ZAP reports.
     Output: The raw findings, one per alert instance (merged and scored later, see merge_and_score).
-            Each carries ZAP's own risk and confidence codes, the risk code is used when no CVE/CWE score is available.
+            Each carries ZAP's own risk and confidence codes. The risk code sets the sort order, and is also used
+            as the Composite Score when no CVE/CWE score is available.
     """
     items: list = []
 
@@ -789,9 +885,9 @@ def main():
         default=DEFAULT_OUTPUT
     )
 
-    # Replaces argparse's default error with a short message and exit code 1
+    # Replaces argparse's default error with a short message (including what was wrong) and exit code 1
     def unrecognised(message: str) -> None:
-        print(f"\n[-] Unrecognised command, type {Path(sys.argv[0]).name} -h for help.", file=sys.stderr)
+        print(f"\n[-] {message}. Type {Path(sys.argv[0]).name} -h for help.", file=sys.stderr)
         sys.exit(1)
 
     args_parser.error = unrecognised

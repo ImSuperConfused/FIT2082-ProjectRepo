@@ -15,7 +15,7 @@
          "ZAP: Content Security Policy (CSP) Header Not Set",
          "Nikto: Suggested security header missing: content-security-policy."
       ]
-   },
+   }, 
    {
       "Scanner": "ZAP",
       "Title": "Missing Anti-clickjacking Header",

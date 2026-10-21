@@ -31,9 +31,14 @@
       "Severity": "Medium",
       "Confidence": "High",
       "Scanners": [
+         "Nikto",
          "ZAP"
       ],
       "Affected": [
+         {
+            "url": "localhost:80/",
+            "method": "GET"
+         },
          {
             "url": "http://127.0.0.1:4280/login.php",
             "method": "GET"
@@ -54,6 +59,7 @@
          "CWE-693"
       ],
       "References": [
+         "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP",
          "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP",
          "https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html",
          "https://www.w3.org/TR/CSP/",
@@ -62,7 +68,9 @@
          "https://caniuse.com/#feat=contentsecuritypolicy",
          "https://content-security-policy.com/"
       ],
-      "Also Reported As": [],
+      "Also Reported As": [
+         "Suggested security header missing: content-security-policy."
+      ],
       "Composite Score": 0.10585
    },
    {
@@ -71,9 +79,14 @@
       "Severity": "Low",
       "Confidence": "Medium",
       "Scanners": [
+         "Nikto",
          "ZAP"
       ],
       "Affected": [
+         {
+            "url": "localhost:80/",
+            "method": "GET"
+         },
          {
             "url": "http://127.0.0.1:4280/dvwa/css/login.css",
             "method": "GET"
@@ -102,10 +115,15 @@
          "CWE-693"
       ],
       "References": [
+         "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options",
+         "https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/",
          "https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)",
          "https://owasp.org/www-community/Security_Headers"
       ],
-      "Also Reported As": [],
+      "Also Reported As": [
+         "Suggested security header missing: x-content-type-options.",
+         "The X-Content-Type-Options header is not set."
+      ],
       "Composite Score": 0.10585
    },
    {
@@ -304,30 +322,6 @@
    },
    {
       "ID": 10,
-      "Title": "Suggested security header missing: content-security-policy.",
-      "Severity": null,
-      "Confidence": null,
-      "Scanners": [
-         "Nikto"
-      ],
-      "Affected": [
-         {
-            "url": "localhost:80/",
-            "method": "GET"
-         }
-      ],
-      "Description": "Suggested security header missing: content-security-policy.",
-      "Solution": null,
-      "CVE": [],
-      "CWE": [],
-      "References": [
-         "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP"
-      ],
-      "Also Reported As": [],
-      "Composite Score": null
-   },
-   {
-      "ID": 11,
       "Title": "Suggested security header missing: strict-transport-security.",
       "Severity": null,
       "Confidence": null,
@@ -351,7 +345,7 @@
       "Composite Score": null
    },
    {
-      "ID": 12,
+      "ID": 11,
       "Title": "Suggested security header missing: permissions-policy.",
       "Severity": null,
       "Confidence": null,
@@ -375,31 +369,7 @@
       "Composite Score": null
    },
    {
-      "ID": 13,
-      "Title": "Suggested security header missing: x-content-type-options.",
-      "Severity": null,
-      "Confidence": null,
-      "Scanners": [
-         "Nikto"
-      ],
-      "Affected": [
-         {
-            "url": "localhost:80/",
-            "method": "GET"
-         }
-      ],
-      "Description": "Suggested security header missing: x-content-type-options.",
-      "Solution": null,
-      "CVE": [],
-      "CWE": [],
-      "References": [
-         "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options"
-      ],
-      "Also Reported As": [],
-      "Composite Score": null
-   },
-   {
-      "ID": 14,
+      "ID": 12,
       "Title": "Suggested security header missing: referrer-policy.",
       "Severity": null,
       "Confidence": null,
@@ -423,7 +393,7 @@
       "Composite Score": null
    },
    {
-      "ID": 15,
+      "ID": 13,
       "Title": "Apache/2.4.25 appears to be outdated (current is at least 2.4.68).",
       "Severity": null,
       "Confidence": null,
@@ -445,7 +415,7 @@
       "Composite Score": null
    },
    {
-      "ID": 16,
+      "ID": 14,
       "Title": "Directory indexing found.",
       "Severity": null,
       "Confidence": null,
@@ -473,7 +443,7 @@
       "Composite Score": null
    },
    {
-      "ID": 17,
+      "ID": 15,
       "Title": "Configuration information may be available remotely.",
       "Severity": null,
       "Confidence": null,
@@ -495,7 +465,7 @@
       "Composite Score": null
    },
    {
-      "ID": 18,
+      "ID": 16,
       "Title": "Apache default file found.",
       "Severity": null,
       "Confidence": null,
@@ -519,7 +489,7 @@
       "Composite Score": null
    },
    {
-      "ID": 19,
+      "ID": 17,
       "Title": "Admin login page/section found.",
       "Severity": null,
       "Confidence": null,
@@ -541,7 +511,7 @@
       "Composite Score": null
    },
    {
-      "ID": 20,
+      "ID": 18,
       "Title": ".gitignore file found.",
       "Severity": null,
       "Confidence": null,
@@ -559,30 +529,6 @@
       "CVE": [],
       "CWE": [],
       "References": [],
-      "Also Reported As": [],
-      "Composite Score": null
-   },
-   {
-      "ID": 21,
-      "Title": "The X-Content-Type-Options header is not set.",
-      "Severity": null,
-      "Confidence": null,
-      "Scanners": [
-         "Nikto"
-      ],
-      "Affected": [
-         {
-            "url": "localhost:80/",
-            "method": "GET"
-         }
-      ],
-      "Description": "The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type.",
-      "Solution": null,
-      "CVE": [],
-      "CWE": [],
-      "References": [
-         "https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/"
-      ],
       "Also Reported As": [],
       "Composite Score": null
    }

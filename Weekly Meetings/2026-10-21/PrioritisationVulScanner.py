@@ -11,8 +11,10 @@ Usage:
 The extension of the -o file picks the output format (.json or .pdf). Any other extension is an error.
 
 Findings are processed in four steps:
-  1. Merge within each scanner: findings that share at least one reference (links are separated by whitespace) become one.
-  2. Merge between scanners: merged findings of different scanners that share at least one reference become one.
+  1. Merge within each scanner: findings that share at least one reference (links are separated by whitespace),
+     or that report the same missing security header, become one.
+  2. Merge between scanners: merged findings of different scanners that share at least one reference, or that
+     report the same missing security header, become one.
   3. Score what is left (Composite Score, below).
   4. Sort. Findings are sorted by Composite Score from 10 down to 0, with unscored findings last. Ties keep a fixed order.
 
@@ -94,6 +96,23 @@ CWE_EXTRACT = re.compile(r"CWE-[0-9]+")
 SENTENCE_END = re.compile(r"(?<=[.!?])\s+")
 HTML_BREAKS = re.compile(r"</p\s*>|<br\s*/?>", re.IGNORECASE)
 HTML_TAGS = re.compile(r"<[^>]+>")
+NON_LETTERS = re.compile(r"[^a-z]")
+
+# Security headers that scanners report under different titles and with different reference links.
+# Canonical name -> spellings to look for in a title that has everything except lowercase letters removed.
+HEADER_ALIASES = {
+    "content-security-policy": ("contentsecuritypolicy",),
+    "x-content-type-options": ("xcontenttypeoptions",),
+    "strict-transport-security": ("stricttransportsecurity",),
+    "permissions-policy": ("permissionspolicy",),
+    "referrer-policy": ("referrerpolicy",),
+    "x-frame-options": ("xframeoptions", "anticlickjacking"),
+}
+
+# A title only counts as a "header missing" finding if it also says so (in the same letters-only form).
+# This keeps ZAP titles such as "CSP: Wildcard Directive" or "Strict-Transport-Security Multiple Header Entries"
+# from being merged into a "header not set" finding.
+HEADER_MISSING_WORDS = ("missing", "notset", "notpresent", "notfound")
 
 # The fields of a record that hold a set of values (a dict used as an insertion-ordered set, so each value is listed once)
 RECORD_SETS = ("scanners", "titles", "affected", "descriptions", "solutions", "links", "cves", "cwes")
@@ -397,10 +416,37 @@ def fetch_cwe_scores(cwes: set) -> dict:
     return {cwe: CWE_CACHE[cwe] for cwe in cwes}
 
 
+def header_keys(record: dict) -> list:
+    """
+    Input: A record (see merge_and_score).
+    Output: One ("header", name) key per title that says a security header is missing or not set, so findings about
+            the same header merge even when their titles and reference links differ (ZAP's "X-Content-Type-Options
+            Header Missing" and Nikto's "The X-Content-Type-Options header is not set." both give the same key).
+            If a title names several headers, only the first one counts (Nikto's X-Frame-Options title also
+            mentions Content-Security-Policy). Titles that are about something else, such as "CSP: Wildcard
+            Directive", give no key.
+    """
+    keys: list = []
+
+    for title in record["titles"]:
+        flat = NON_LETTERS.sub("", title.lower())
+
+        if not any(word in flat for word in HEADER_MISSING_WORDS):
+            continue
+
+        hits = [(flat.find(alias), name) for name, aliases in HEADER_ALIASES.items() for alias in aliases if alias in flat]
+
+        if hits:
+            keys.append(("header", min(hits)[1]))
+
+    return keys
+
+
 def merge_records(records: list, by_title: bool) -> list:
     """
     Input: Records (see merge_and_score), and by_title: whether records with no references are merged when they share a title.
-    Output: The records, where every group of records that share at least one reference is merged into one record.
+    Output: The records, where every group of records that share at least one reference (or the same missing security
+            header, see header_keys) is merged into one record.
             A chain counts: if A shares a reference with B, and B with C, then A, B and C are merged.
     """
     # Union-find: every record starts in its own group, and records that share a reference are joined into one group
@@ -414,11 +460,15 @@ def merge_records(records: list, by_title: bool) -> list:
 
         return index
 
-    first_seen: dict = {}  # reference -> the first record that had it
+    first_seen: dict = {}  # reference or key -> the first record that had it
 
     for index, record in enumerate(records):
-        # Without references, records with the same title count as sharing one (only when by_title is True)
-        shared = list(record["links"]) or ([("title", title) for title in record["titles"]] if by_title else [])
+        # Records share a reference link or a header name. Without any links, records with the same title also
+        # count as sharing one (only when by_title is True).
+        shared = list(record["links"]) + header_keys(record)
+
+        if not record["links"] and by_title:
+            shared += [("title", title) for title in record["titles"]]
 
         for reference in shared:
             if reference in first_seen:
@@ -518,8 +568,8 @@ def merge_and_score(items: list) -> list:
     Input: The raw findings of every report, each a dict with: scanner, title, url, method, description, solution,
            references, cves, cwes and fallback (the scanner's own ratings, used when no CVSS/EPSS score can be worked out).
     Output: Findings in the unified format (see the top of this file), made in four steps:
-            1. Merge within each scanner (findings that share at least one reference, or with no references a title).
-            2. Merge between scanners (the merged findings that share at least one reference).
+            1. Merge within each scanner (findings that share at least one reference or missing header, or with no references a title).
+            2. Merge between scanners (the merged findings that share at least one reference or missing header).
             3. Score what is left (see score_records).
             4. Sort, highest Composite Score first and unscored last, and give every finding its ID (its position).
     """
@@ -549,7 +599,7 @@ def merge_and_score(items: list) -> list:
         print(f"[+] {scanner}: {len(scanner_records)} raw, {len(merged)} unique, {len(scanner_records) - len(merged)} duplicate(s) merged", file=sys.stderr)
         records.extend(merged)
 
-    # 2. Merge between scanners (after step 1 only findings of different scanners can still share a reference)
+    # 2. Merge between scanners (after step 1 only findings of different scanners can still share a reference or header)
     if len(by_scanner) > 1:
         before = len(records)
         records = merge_records(records, by_title=False)

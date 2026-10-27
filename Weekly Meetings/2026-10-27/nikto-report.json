@@ -1,0 +1,236 @@
+[
+   {
+      "end_time" : "2026-09-15 19:49:27 -0400",
+      "host" : "127.0.0.1",
+      "ip" : "127.0.0.1",
+      "port" : 80,
+      "server_banner" : null,
+      "start_time" : "2026-09-15 19:49:05 -0400",
+      "vulnerabilities" : [
+         {
+            "id" : "750500",
+            "method" : "GET",
+            "msg" : "Directory indexing found.",
+            "references" : "CWE-548",
+            "url" : "/dvwa/"
+         },
+         {
+            "id" : "999990",
+            "method" : "OPTIONS",
+            "msg" : "OPTIONS: Allowed HTTP Methods: GET, HEAD, POST, OPTIONS .",
+            "references" : "",
+            "url" : "/dvwa/"
+         },
+         {
+            "id" : "999979",
+            "method" : "GET",
+            "msg" : "RFC-1918 IP address found in the 'location' header. The IP is \"172.17.0.2\".",
+            "references" : "https://portswigger.net/kb/issues/00600300_private-ip-addresses-disclosed",
+            "url" : "/dvwa/images"
+         },
+         {
+            "id" : "999988",
+            "method" : "GET",
+            "msg" : "/images: The web server may reveal its internal or real IP in the Location header via a request to with HTTP/1.0. The value is \"172.17.0.2\".",
+            "references" : "CVE-2000-0649",
+            "url" : "/dvwa/images"
+         },
+         {
+            "id" : "013587",
+            "method" : "GET",
+            "msg" : "Suggested security header missing: content-security-policy.",
+            "references" : "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP",
+            "url" : "/dvwa/"
+         },
+         {
+            "id" : "013587",
+            "method" : "GET",
+            "msg" : "Suggested security header missing: referrer-policy.",
+            "references" : "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy",
+            "url" : "/dvwa/"
+         },
+         {
+            "id" : "013587",
+            "method" : "GET",
+            "msg" : "Suggested security header missing: strict-transport-security.",
+            "references" : "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security",
+            "url" : "/dvwa/"
+         },
+         {
+            "id" : "013587",
+            "method" : "GET",
+            "msg" : "Suggested security header missing: permissions-policy.",
+            "references" : "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy",
+            "url" : "/dvwa/"
+         },
+         {
+            "id" : "013587",
+            "method" : "GET",
+            "msg" : "Suggested security header missing: x-content-type-options.",
+            "references" : "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options",
+            "url" : "/dvwa/"
+         },
+         {
+            "id" : "600050",
+            "method" : "HEAD",
+            "msg" : "Apache/2.4.25 appears to be outdated (current is at least 2.4.68).",
+            "references" : "",
+            "url" : "/dvwa/"
+         },
+         {
+            "id" : "750500",
+            "method" : "GET",
+            "msg" : "Directory indexing found.",
+            "references" : "CWE-548",
+            "url" : "/dvwa/./"
+         },
+         {
+            "id" : "000327",
+            "method" : "GET",
+            "msg" : "Appending '/./' to a directory allows indexing.",
+            "references" : "",
+            "url" : "/dvwa/./"
+         },
+         {
+            "id" : "750500",
+            "method" : "GET",
+            "msg" : "Directory indexing found.",
+            "references" : "CWE-548",
+            "url" : "/dvwa//"
+         },
+         {
+            "id" : "000396",
+            "method" : "GET",
+            "msg" : "Apache on Red Hat Linux release 9 reveals the root directory listing by default if there is no index page.",
+            "references" : "",
+            "url" : "/dvwa//"
+         },
+         {
+            "id" : "750500",
+            "method" : "GET",
+            "msg" : "Directory indexing found.",
+            "references" : "CWE-548",
+            "url" : "/dvwa/%2e/"
+         },
+         {
+            "id" : "000460",
+            "method" : "GET",
+            "msg" : "Weblogic allows source code or directory listing, upgrade to v6.0 SP1 or higher.",
+            "references" : "https://web.archive.org/web/20171102042459/http://www.securityfocus.com/bid/2513",
+            "url" : "/dvwa/%2e/"
+         },
+         {
+            "id" : "750500",
+            "method" : "GET",
+            "msg" : "Directory indexing found.",
+            "references" : "CWE-548",
+            "url" : "/dvwa///"
+         },
+         {
+            "id" : "001407",
+            "method" : "GET",
+            "msg" : "The remote server may allow directory listings through Web Publisher by forcing the server to show all files via 'open directory browsing'. Web Publisher should be disabled.",
+            "references" : "CVE-1999-0269",
+            "url" : "/dvwa/?PageServices"
+         },
+         {
+            "id" : "001408",
+            "method" : "GET",
+            "msg" : "The remote server may allow directory listings through Web Publisher by forcing the server to show all files via 'open directory browsing'. Web Publisher should be disabled.",
+            "references" : "CVE-1999-0269",
+            "url" : "/dvwa/?wp-cs-dump"
+         },
+         {
+            "id" : "750500",
+            "method" : "GET",
+            "msg" : "Directory indexing found.",
+            "references" : "CWE-548",
+            "url" : "/dvwa/css/"
+         },
+         {
+            "id" : "001631",
+            "method" : "GET",
+            "msg" : "This might be interesting.",
+            "references" : "",
+            "url" : "/dvwa/css/"
+         },
+         {
+            "id" : "750500",
+            "method" : "GET",
+            "msg" : "Directory indexing found.",
+            "references" : "CWE-548",
+            "url" : "/dvwa/includes/"
+         },
+         {
+            "id" : "001702",
+            "method" : "GET",
+            "msg" : "This might be interesting.",
+            "references" : "",
+            "url" : "/dvwa/includes/"
+         },
+         {
+            "id" : "750500",
+            "method" : "GET",
+            "msg" : "Directory indexing found.",
+            "references" : "CWE-548",
+            "url" : "/dvwa/images/"
+         },
+         {
+            "id" : "750500",
+            "method" : "GET",
+            "msg" : "Directory indexing found.",
+            "references" : "CWE-548",
+            "url" : "/dvwa///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+         },
+         {
+            "id" : "003029",
+            "method" : "GET",
+            "msg" : "Abyss 1.03 reveals directory listing when multiple /'s are requested.",
+            "references" : "CVE-2002-1078",
+            "url" : "/dvwa///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+         },
+         {
+            "id" : "003308",
+            "method" : "GET",
+            "msg" : "Apache allows directory listings by requesting.",
+            "references" : "CVE-2001-0731",
+            "url" : "/dvwa/?D=A"
+         },
+         {
+            "id" : "003309",
+            "method" : "GET",
+            "msg" : "Apache allows directory listings by requesting.",
+            "references" : "CVE-2001-0731",
+            "url" : "/dvwa/?N=D"
+         },
+         {
+            "id" : "003310",
+            "method" : "GET",
+            "msg" : "Apache allows directory listings by requesting.",
+            "references" : "CVE-2001-0731",
+            "url" : "/dvwa/?S=A"
+         },
+         {
+            "id" : "003311",
+            "method" : "GET",
+            "msg" : "Apache allows directory listings. Upgrade Apache or disable directory indexing.",
+            "references" : "CVE-2001-0731",
+            "url" : "/dvwa/?M=A"
+         },
+         {
+            "id" : "007342",
+            "method" : "GET",
+            "msg" : "X-Frame-Options header is deprecated and was replaced with the Content-Security-Policy HTTP header with the frame-ancestors directive.",
+            "references" : "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options",
+            "url" : "/dvwa/"
+         },
+         {
+            "id" : "007352",
+            "method" : "GET",
+            "msg" : "The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type.",
+            "references" : "https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/",
+            "url" : "/dvwa/"
+         }
+      ]
+   }
+]

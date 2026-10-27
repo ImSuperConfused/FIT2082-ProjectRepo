@@ -1,0 +1,1099 @@
+%PDF-1.4
+%ту╧╙
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 14 0 R 36 0 R 50 0 R 68 0 R 78 0 R 86 0 R 89 0 R] /Count 9 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >>  /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 5549 >>
+stream
+0.06 0.09 0.16 rg 0 792 595 50 re f
+0.25 0.45 0.85 rg 0 788 595 4 re f
+BT /F2 13 Tf 1 1 1 rg 36 812 Td (Vulnerability Assessment Prioritisation Report) Tj ET
+BT /F1 8.5 Tf 0.7 0.78 0.9 rg 36 798 Td (Total Findings: 29) Tj ET
+BT /F2 22 Tf 0.06 0.09 0.16 rg 36.0 748.0 Td (Web Vulnerability Prioritiser) Tj ET
+BT /F1 10 Tf 0.39 0.45 0.55 rg 36.0 730.0 Td (Unranked scanner outputs merged into one fix-first list.) Tj ET
+0.25 0.45 0.85 rg 36 720 523 2 re f
+BT /F2 11 Tf 0.06 0.09 0.16 rg 36.0 708.0 Td (Overview) Tj ET
+0.50 0.07 0.07 rg 36.0 648 80 46 re f
+BT /F2 17 Tf 1.00 1.00 1.00 rg 44.0 668.0 Td (0) Tj ET
+BT /F1 8.5 Tf 1.00 1.00 1.00 rg 44.0 654.0 Td (Critical) Tj ET
+0.86 0.15 0.15 rg 124.6 648 80 46 re f
+BT /F2 17 Tf 1.00 1.00 1.00 rg 132.6 668.0 Td (0) Tj ET
+BT /F1 8.5 Tf 1.00 1.00 1.00 rg 132.6 654.0 Td (High) Tj ET
+0.15 0.45 0.82 rg 213.2 648 80 46 re f
+BT /F2 17 Tf 1.00 1.00 1.00 rg 221.2 668.0 Td (0) Tj ET
+BT /F1 8.5 Tf 1.00 1.00 1.00 rg 221.2 654.0 Td (Medium) Tj ET
+0.13 0.69 0.30 rg 301.8 648 80 46 re f
+BT /F2 17 Tf 1.00 1.00 1.00 rg 309.8 668.0 Td (15) Tj ET
+BT /F1 8.5 Tf 1.00 1.00 1.00 rg 309.8 654.0 Td (Low) Tj ET
+0.39 0.45 0.55 rg 390.4 648 80 46 re f
+BT /F2 17 Tf 1.00 1.00 1.00 rg 398.4 668.0 Td (14) Tj ET
+BT /F1 8.5 Tf 1.00 1.00 1.00 rg 398.4 654.0 Td (No Score) Tj ET
+0.06 0.09 0.16 rg 479.0 648 80 46 re f
+BT /F2 13 Tf 1.00 1.00 1.00 rg 487.0 668.0 Td (69.7 s) Tj ET
+BT /F1 8.5 Tf 1.00 1.00 1.00 rg 487.0 654.0 Td (Time taken) Tj ET
+BT /F1 9 Tf 0.39 0.45 0.55 rg 36.0 634.0 Td (29 finding\(s\) in total: 15 scored, 14 with no score.) Tj ET
+0.95 0.96 0.98 rg 0.85 0.88 0.92 RG 0.75 w 36 387.5 523 228.5 re B
+BT /F2 9.5 Tf 0.15 0.38 0.75 rg 46.0 589.0 Td (Tools parsed) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 50.0 578.5 Td (Х) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 62.0 578.5 Td (Nikto: nikto-report.json \(32 raw findings\)) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 50.0 568.0 Td (Х) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 62.0 568.0 Td (ZAP: zap_report.json \(33 raw findings\)) Tj ET
+BT /F2 9.5 Tf 0.15 0.38 0.75 rg 46.0 553.0 Td (Vulnerabilities merged) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 50.0 542.5 Td (Х) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 62.0 542.5 Td (Within each scanner \(intra-scanner\): Nikto 32 to 19, ZAP 33 to 11. Findings that share at least one) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 62.0 532.0 Td (reference link are merged, even through a chain. Findings with no references are merged when they share a) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 62.0 521.5 Td (title.) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 50.0 511.0 Td (Х) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 62.0 511.0 Td (Between scanners \(inter-scanner\): 30 to 29 \(1 merged\). Findings of different scanners that share at least) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 62.0 500.5 Td (one reference link are merged.) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 50.0 490.0 Td (Х) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 62.0 490.0 Td (Overall: 65 raw findings became 29 findings. Every URL, title and description is kept in a list, so no) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 62.0 479.5 Td (information is lost.) Tj ET
+BT /F2 9.5 Tf 0.15 0.38 0.75 rg 46.0 464.5 Td (How the Composite Score was calculated) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 50.0 454.0 Td (Х) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 62.0 454.0 Td (Composite Score = EPSS x CVSS \(0 to 10\). Findings are sorted from the highest score to the lowest, and) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 62.0 443.5 Td (findings with no score come last.) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 50.0 433.0 Td (Х) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 62.0 433.0 Td (A CVE is referenced: the CVSS \(NVD\) and EPSS \(FIRST\) scores of that CVE.) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 50.0 422.5 Td (Х) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 62.0 422.5 Td (Only a CWE is referenced: the average CVSS and EPSS of the CVEs NVD lists for that CWE.) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 50.0 412.0 Td (Х) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 62.0 412.0 Td (Nothing found: a ZAP finding scores its risk code \(0 to 3\) x 2.5, and any other finding gets no score.) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 50.0 401.5 Td (Х) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 62.0 401.5 Td (Severity bands \(badges and chart\): Low 0 to 3.9, Medium 4 to 6.9, High 7 to 8.9, Critical 9 to 10.) Tj ET
+BT /F2 11 Tf 0.06 0.09 0.16 rg 36.0 365.5 Td (Severity distribution \(scored findings\)) Tj ET
+0.13 0.69 0.30 rg 1 1 1 RG 1 w 116.00 289.50 m 116.00 349.50 l 149.14 349.50 176.00 322.64 176.00 289.50 c 176.00 256.36 149.14 229.50 116.00 229.50 c 82.86 229.50 56.00 256.36 56.00 289.50 c 56.00 322.64 82.86 349.50 116.00 349.50 c h B
+BT /F2 9 Tf 1.00 1.00 1.00 rg 111.0 249.3 Td (15) Tj ET
+0.50 0.07 0.07 rg 226 334.5 10 10 re f
+BT /F1 9.5 Tf 0.15 0.18 0.23 rg 242.0 335.5 Td (Critical: 0 finding\(s\) \(0.0%\)) Tj ET
+0.86 0.15 0.15 rg 226 317.5 10 10 re f
+BT /F1 9.5 Tf 0.15 0.18 0.23 rg 242.0 318.5 Td (High: 0 finding\(s\) \(0.0%\)) Tj ET
+0.15 0.45 0.82 rg 226 300.5 10 10 re f
+BT /F1 9.5 Tf 0.15 0.18 0.23 rg 242.0 301.5 Td (Medium: 0 finding\(s\) \(0.0%\)) Tj ET
+0.13 0.69 0.30 rg 226 283.5 10 10 re f
+BT /F1 9.5 Tf 0.15 0.18 0.23 rg 242.0 284.5 Td (Low: 15 finding\(s\) \(100.0%\)) Tj ET
+BT /F2 9.5 Tf 0.06 0.09 0.16 rg 226.0 263.5 Td (Total scored: 15 finding\(s\)) Tj ET
+0.85 0.88 0.92 RG 0.5 w 36 36 m 559 36 l S
+BT /F1 8 Tf 0.45 0.5 0.58 rg 36 24 Td (Python Vulnerability Prioritiser Audit  |  Generated: 2026-10-26 21:00:04 EDT  |  Time taken: 69.7 s) Tj ET
+BT /F2 8 Tf 0.45 0.5 0.58 rg 504 24 Td (Page 1 of 9) Tj ET
+
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Annots [9 0 R 10 0 R 11 0 R 12 0 R 13 0 R] /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 5719 >>
+stream
+0.06 0.09 0.16 rg 0 792 595 50 re f
+0.25 0.45 0.85 rg 0 788 595 4 re f
+BT /F2 13 Tf 1 1 1 rg 36 812 Td (Vulnerability Assessment Prioritisation Report) Tj ET
+BT /F1 8.5 Tf 0.7 0.78 0.9 rg 36 798 Td (Total Findings: 29) Tj ET
+BT /F2 11 Tf 0.06 0.09 0.16 rg 36.0 770.0 Td (Findings \(highest score first\)) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 593 523 151 re S
+0.95 0.96 0.98 rg 36.5 722 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 722 m 559 722 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 729 Td (#1  Apache allows directory listings by requesting. / Apache a...) Tj ET
+0.14 0.55 0.60 rg 479 726 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 729.5 Td (LOW \(2.84\)) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 710 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 710 Td (Nikto) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 695 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 695 Td (127.0.0.1:80/dvwa/?D=A) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 684 Td (127.0.0.1:80/dvwa/?N=D) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 673 Td (127.0.0.1:80/dvwa/?S=A) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 662 Td (127.0.0.1:80/dvwa/?M=A) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 647 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 647 Td (GET) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 632 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 632 Td (Apache allows directory listings by requesting.) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 621 Td (Apache allows directory listings. Upgrade Apache or disable directory indexing.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 606 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 606 Td (CVE-2001-0731) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 439 523 140 re S
+0.95 0.96 0.98 rg 36.5 557 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 557 m 559 557 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 564 Td (#2  Cookie without SameSite Attribute) Tj ET
+0.14 0.57 0.56 rg 479 561 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 564.5 Td (LOW \(2.50\)) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 545 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 545 Td (ZAP) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 530 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 530 Td (http://localhost:4280) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 515 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 515 Td (GET) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 500 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 500 Td (A cookie has been set without the SameSite attribute, which means that the cookie) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 489 Td (can be sent as a result of a 'cross-site' request. The SameSite attribute is an) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 478 Td (effective counter measure to cross-site request forgery, cross-site script) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 467 Td (inclusion, and timing attacks.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 452 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 452 Td (https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-same-site) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 307 523 118 re S
+0.95 0.96 0.98 rg 36.5 403 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 403 m 559 403 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 410 Td (#3  /images: The web server may reveal its internal or real IP...) Tj ET
+0.14 0.59 0.51 rg 479 407 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 410.5 Td (LOW \(1.99\)) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 391 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 391 Td (Nikto) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 376 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 376 Td (127.0.0.1:80/dvwa/images) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 361 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 361 Td (GET) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 346 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 346 Td (/images: The web server may reveal its internal or real IP in the Location header) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 335 Td (via a request to with HTTP/1.0. The value is "172.17.0.2".) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 320 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 320 Td (CVE-2000-0649) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 153 523 140 re S
+0.95 0.96 0.98 rg 36.5 271 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 271 m 559 271 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 278 Td (#4  The remote server may allow directory listings through Web...) Tj ET
+0.13 0.68 0.33 rg 479 275 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 278.5 Td (LOW \(0.25\)) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 259 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 259 Td (Nikto) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 244 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 244 Td (127.0.0.1:80/dvwa/?PageServices) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 233 Td (127.0.0.1:80/dvwa/?wp-cs-dump) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 218 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 218 Td (GET) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 203 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 203 Td (The remote server may allow directory listings through Web Publisher by forcing) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 192 Td (the server to show all files via 'open directory browsing'. Web Publisher should) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 181 Td (be disabled.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 166 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 166 Td (CVE-1999-0269) Tj ET
+0.85 0.88 0.92 RG 0.5 w 36 36 m 559 36 l S
+BT /F1 8 Tf 0.45 0.5 0.58 rg 36 24 Td (Python Vulnerability Prioritiser Audit  |  Generated: 2026-10-26 21:00:04 EDT  |  Time taken: 69.7 s) Tj ET
+BT /F2 8 Tf 0.45 0.5 0.58 rg 504 24 Td (Page 2 of 9) Tj ET
+
+endstream
+endobj
+9 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 604.0 181.0 615.0] /Border [0 0 0] /A << /S /URI /URI (https://nvd.nist.gov/vuln/detail/CVE-2001-0731) >> >>
+endobj
+10 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 528.0 221.0 539.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280) >> >>
+endobj
+11 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 450.0 481.0 461.0] /Border [0 0 0] /A << /S /URI /URI (https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-same-site) >> >>
+endobj
+12 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 318.0 181.0 329.0] /Border [0 0 0] /A << /S /URI /URI (https://nvd.nist.gov/vuln/detail/CVE-2000-0649) >> >>
+endobj
+13 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 164.0 181.0 175.0] /Border [0 0 0] /A << /S /URI /URI (https://nvd.nist.gov/vuln/detail/CVE-1999-0269) >> >>
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Annots [16 0 R 17 0 R 18 0 R 19 0 R 20 0 R 21 0 R 22 0 R 23 0 R 24 0 R 25 0 R 26 0 R 27 0 R 28 0 R 29 0 R 30 0 R 31 0 R 32 0 R 33 0 R 34 0 R 35 0 R] /Contents 15 0 R >>
+endobj
+15 0 obj
+<< /Length 6838 >>
+stream
+0.06 0.09 0.16 rg 0 792 595 50 re f
+0.25 0.45 0.85 rg 0 788 595 4 re f
+BT /F2 13 Tf 1 1 1 rg 36 812 Td (Vulnerability Assessment Prioritisation Report) Tj ET
+BT /F1 8.5 Tf 0.7 0.78 0.9 rg 36 798 Td (Total Findings: 29) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 630 523 140 re S
+0.95 0.96 0.98 rg 36.5 748 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 748 m 559 748 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 755 Td (#5  Abyss 1.03 reveals directory listing when multiple /'s are...) Tj ET
+0.13 0.68 0.31 rg 479 752 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 755.5 Td (LOW \(0.14\)) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 736 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 736 Td (Nikto) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 721 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 721 Td (127.0.0.1:80/dvwa/////////////////////////////////////////////////////////////////) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 710 Td (//////////////////////////////////////////////////////////////////////////////////) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 699 Td (//////////////////////////////////////////////////////////////////////////////////) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 688 Td (//////////////////////////) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 673 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 673 Td (GET) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 658 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 658 Td (Abyss 1.03 reveals directory listing when multiple /'s are requested.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 643 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 643 Td (CVE-2002-1078) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 333 523 283 re S
+0.95 0.96 0.98 rg 36.5 594 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 594 m 559 594 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 601 Td (#6  Content Security Policy \(CSP\) Header Not Set) Tj ET
+0.13 0.68 0.31 rg 479 598 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 601.5 Td (LOW \(0.11\)) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 582 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 582 Td (ZAP) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 567 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 567 Td (http://localhost:4280) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 556 Td (http://localhost:4280/login.php) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 545 Td (http://localhost:4280/sitemap.xml) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 530 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 530 Td (GET) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 515 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 515 Td (Content Security Policy \(CSP\) is an added layer of security that helps to detect) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 504 Td (and mitigate certain types of attacks, including Cross Site Scripting \(XSS\) and) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 493 Td (data injection attacks. These attacks are used for everything from data theft to) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 482 Td (site defacement or distribution of malware. CSP provides a set of standard HTTP) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 471 Td (headers that allow website owners to declare approved sources of content that) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 460 Td (browsers should be allowed to load on that page Ч covered types are JavaScript,) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 449 Td (CSS, HTML frames, fonts, images and embeddable objects such as Java applets,) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 438 Td (ActiveX, audio and video files.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 423 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 423 Td (https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 412 Td (https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 401 Td (.html) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 390 Td (https://www.w3.org/TR/CSP/) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 379 Td (https://w3c.github.io/webappsec-csp/) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 368 Td (https://web.dev/articles/csp) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 357 Td (https://caniuse.com/#feat=contentsecuritypolicy) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 346 Td (https://content-security-policy.com/) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 91 523 228 re S
+0.95 0.96 0.98 rg 36.5 297 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 297 m 559 297 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 304 Td (#7  X-Content-Type-Options Header Missing) Tj ET
+0.13 0.68 0.31 rg 479 301 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 304.5 Td (LOW \(0.11\)) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 285 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 285 Td (ZAP) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 270 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 270 Td (http://localhost:4280) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 259 Td (http://localhost:4280/dvwa/css/login.css) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 248 Td (http://localhost:4280/dvwa/images/login_logo.png) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 237 Td (http://localhost:4280/login.php) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 226 Td (http://localhost:4280/robots.txt) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 211 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 211 Td (GET) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 196 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 196 Td (The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'.) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 185 Td (This allows older versions of Internet Explorer and Chrome to perform) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 174 Td (MIME-sniffing on the response body, potentially causing the response body to be) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 163 Td (interpreted and displayed as a content type other than the declared content type.) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 152 Td (Current \(early 2014\) and legacy versions of Firefox will use the declared content) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 141 Td (type \(if one is set\), rather than performing MIME-sniffing.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 126 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 126 Td (https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-d) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 115 Td (eveloper/compatibility/gg622941\(v=vs.85\)) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 104 Td (https://owasp.org/www-community/Security_Headers) Tj ET
+0.85 0.88 0.92 RG 0.5 w 36 36 m 559 36 l S
+BT /F1 8 Tf 0.45 0.5 0.58 rg 36 24 Td (Python Vulnerability Prioritiser Audit  |  Generated: 2026-10-26 21:00:04 EDT  |  Time taken: 69.7 s) Tj ET
+BT /F2 8 Tf 0.45 0.5 0.58 rg 504 24 Td (Page 3 of 9) Tj ET
+
+endstream
+endobj
+16 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 641.0 181.0 652.0] /Border [0 0 0] /A << /S /URI /URI (https://nvd.nist.gov/vuln/detail/CVE-2002-1078) >> >>
+endobj
+17 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 565.0 221.0 576.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280) >> >>
+endobj
+18 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 554.0 271.0 565.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280/login.php) >> >>
+endobj
+19 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 543.0 281.0 554.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280/sitemap.xml) >> >>
+endobj
+20 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 421.0 416.0 432.0] /Border [0 0 0] /A << /S /URI /URI (https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP) >> >>
+endobj
+21 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 410.0 526.0 421.0] /Border [0 0 0] /A << /S /URI /URI (https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html) >> >>
+endobj
+22 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 399.0 141.0 410.0] /Border [0 0 0] /A << /S /URI /URI (https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html) >> >>
+endobj
+23 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 388.0 246.0 399.0] /Border [0 0 0] /A << /S /URI /URI (https://www.w3.org/TR/CSP/) >> >>
+endobj
+24 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 377.0 296.0 388.0] /Border [0 0 0] /A << /S /URI /URI (https://w3c.github.io/webappsec-csp/) >> >>
+endobj
+25 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 366.0 256.0 377.0] /Border [0 0 0] /A << /S /URI /URI (https://web.dev/articles/csp) >> >>
+endobj
+26 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 355.0 351.0 366.0] /Border [0 0 0] /A << /S /URI /URI (https://caniuse.com/#feat=contentsecuritypolicy) >> >>
+endobj
+27 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 344.0 296.0 355.0] /Border [0 0 0] /A << /S /URI /URI (https://content-security-policy.com/) >> >>
+endobj
+28 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 268.0 221.0 279.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280) >> >>
+endobj
+29 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 257.0 316.0 268.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280/dvwa/css/login.css) >> >>
+endobj
+30 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 246.0 356.0 257.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280/dvwa/images/login_logo.png) >> >>
+endobj
+31 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 235.0 271.0 246.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280/login.php) >> >>
+endobj
+32 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 224.0 276.0 235.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280/robots.txt) >> >>
+endobj
+33 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 124.0 526.0 135.0] /Border [0 0 0] /A << /S /URI /URI (https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941\(v=vs.85\)) >> >>
+endobj
+34 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 113.0 316.0 124.0] /Border [0 0 0] /A << /S /URI /URI (https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941\(v=vs.85\)) >> >>
+endobj
+35 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 102.0 356.0 113.0] /Border [0 0 0] /A << /S /URI /URI (https://owasp.org/www-community/Security_Headers) >> >>
+endobj
+36 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Annots [38 0 R 39 0 R 40 0 R 41 0 R 42 0 R 43 0 R 44 0 R 45 0 R 46 0 R 47 0 R 48 0 R 49 0 R] /Contents 37 0 R >>
+endobj
+37 0 obj
+<< /Length 5815 >>
+stream
+0.06 0.09 0.16 rg 0 792 595 50 re f
+0.25 0.45 0.85 rg 0 788 595 4 re f
+BT /F2 13 Tf 1 1 1 rg 36 812 Td (Vulnerability Assessment Prioritisation Report) Tj ET
+BT /F1 8.5 Tf 0.7 0.78 0.9 rg 36 798 Td (Total Findings: 29) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 586 523 184 re S
+0.95 0.96 0.98 rg 36.5 748 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 748 m 559 748 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 755 Td (#8  X-Frame-Options header is deprecated and was replaced with...) Tj ET
+0.13 0.69 0.31 rg 479 752 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 755.5 Td (LOW \(0.05\)) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 736 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 736 Td (Nikto, ZAP) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 721 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 721 Td (127.0.0.1:80/dvwa/) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 710 Td (http://localhost:4280) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 699 Td (http://localhost:4280/login.php) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 684 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 684 Td (GET) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 669 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 669 Td (X-Frame-Options header is deprecated and was replaced with the) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 658 Td (Content-Security-Policy HTTP header with the frame-ancestors directive.) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 647 Td (The response does not protect against 'ClickJacking' attacks. It should include) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 636 Td (either Content-Security-Policy with 'frame-ancestors' directive or) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 625 Td (X-Frame-Options.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 610 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 610 Td (https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Option) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 599 Td (s) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 443 523 129 re S
+0.95 0.96 0.98 rg 36.5 550 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 550 m 559 550 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 557 Td (#9  HTTP Only Site) Tj ET
+0.13 0.69 0.30 rg 479 554 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 557.5 Td (LOW \(0.05\)) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 538 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 538 Td (ZAP) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 523 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 523 Td (http://localhost:4280/) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 508 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 508 Td (GET) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 493 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 493 Td (The site is only served under HTTP and not HTTPS.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 478 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 478 Td (https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sh) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 467 Td (eet.html) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 456 Td (https://letsencrypt.org/) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 311 523 118 re S
+0.95 0.96 0.98 rg 36.5 407 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 407 m 559 407 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 414 Td (#10  Parameter Tampering) Tj ET
+0.13 0.69 0.30 rg 479 411 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 414.5 Td (LOW \(0.03\)) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 395 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 395 Td (ZAP) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 380 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 380 Td (http://localhost:4280/login.php) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 365 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 365 Td (POST) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 350 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 350 Td (Parameter manipulation caused an error page or Java stack trace to be displayed.) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 339 Td (This indicated lack of exception handling and potential areas for further exploit.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 324 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 324 Td (-) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 157 523 140 re S
+0.95 0.96 0.98 rg 36.5 275 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 275 m 559 275 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 282 Td (#11  In Page Banner Information Leak) Tj ET
+0.13 0.69 0.30 rg 479 279 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 282.5 Td (LOW \(0.01\)) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 263 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 263 Td (ZAP) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 248 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 248 Td (http://localhost:4280/sitemap.xml) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 233 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 233 Td (GET) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 218 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 218 Td (The server returned a version banner string in the response content. Such) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 207 Td (information leaks may allow attackers to further target specific issues impacting) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 196 Td (the product and version in use.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 181 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 181 Td (https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Sec) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 170 Td (urity_Testing/08-Testing_for_Error_Handling/) Tj ET
+0.85 0.88 0.92 RG 0.5 w 36 36 m 559 36 l S
+BT /F1 8 Tf 0.45 0.5 0.58 rg 36 24 Td (Python Vulnerability Prioritiser Audit  |  Generated: 2026-10-26 21:00:04 EDT  |  Time taken: 69.7 s) Tj ET
+BT /F2 8 Tf 0.45 0.5 0.58 rg 504 24 Td (Page 4 of 9) Tj ET
+
+endstream
+endobj
+38 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 708.0 221.0 719.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280) >> >>
+endobj
+39 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 697.0 271.0 708.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280/login.php) >> >>
+endobj
+40 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 608.0 526.0 619.0] /Border [0 0 0] /A << /S /URI /URI (https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options) >> >>
+endobj
+41 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 597.0 121.0 608.0] /Border [0 0 0] /A << /S /URI /URI (https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options) >> >>
+endobj
+42 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 521.0 226.0 532.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280/) >> >>
+endobj
+43 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 476.0 526.0 487.0] /Border [0 0 0] /A << /S /URI /URI (https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html) >> >>
+endobj
+44 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 465.0 156.0 476.0] /Border [0 0 0] /A << /S /URI /URI (https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html) >> >>
+endobj
+45 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 454.0 236.0 465.0] /Border [0 0 0] /A << /S /URI /URI (https://letsencrypt.org/) >> >>
+endobj
+46 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 378.0 271.0 389.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280/login.php) >> >>
+endobj
+47 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 246.0 281.0 257.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280/sitemap.xml) >> >>
+endobj
+48 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 179.0 526.0 190.0] /Border [0 0 0] /A << /S /URI /URI (https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/) >> >>
+endobj
+49 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 168.0 336.0 179.0] /Border [0 0 0] /A << /S /URI /URI (https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/) >> >>
+endobj
+50 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Annots [52 0 R 53 0 R 54 0 R 55 0 R 56 0 R 57 0 R 58 0 R 59 0 R 60 0 R 61 0 R 62 0 R 63 0 R 64 0 R 65 0 R 66 0 R 67 0 R] /Contents 51 0 R >>
+endobj
+51 0 obj
+<< /Length 6492 >>
+stream
+0.06 0.09 0.16 rg 0 792 595 50 re f
+0.25 0.45 0.85 rg 0 788 595 4 re f
+BT /F2 13 Tf 1 1 1 rg 36 812 Td (Vulnerability Assessment Prioritisation Report) Tj ET
+BT /F1 8.5 Tf 0.7 0.78 0.9 rg 36 798 Td (Total Findings: 29) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 487 523 283 re S
+0.95 0.96 0.98 rg 36.5 748 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 748 m 559 748 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 755 Td (#12  Server Leaks Information via "X-Powered-By" HTTP Response...) Tj ET
+0.13 0.69 0.30 rg 479 752 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 755.5 Td (LOW \(0.01\)) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 736 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 736 Td (ZAP) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 721 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 721 Td (http://localhost:4280) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 710 Td (http://localhost:4280/) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 699 Td (http://localhost:4280/login.php) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 688 Td (http://localhost:4280/dvwa/css/login.css) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 677 Td (http://localhost:4280/dvwa/images/login_logo.png) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 666 Td (http://localhost:4280/robots.txt) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 651 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 651 Td (GET) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 640 Td (POST) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 625 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 625 Td (The web/application server is leaking information via one or more "X-Powered-By") Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 614 Td (HTTP response headers. Access to such information may facilitate attackers) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 603 Td (identifying other frameworks/components your web application is reliant upon and) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 592 Td (the vulnerabilities such components may be subject to.) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 581 Td (The web/application server is leaking version information via the "Server" HTTP) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 570 Td (response header. Access to such information may facilitate attackers identifying) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 559 Td (other vulnerabilities your web/application server is subject to.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 544 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 544 Td (https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Sec) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 533 Td (urity_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 522 Td (https://www.troyhunt.com/shhh-dont-let-your-response-headers/) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 511 Td (https://httpd.apache.org/docs/current/mod/core.html#servertokens) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 500 Td (https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552\(v=pandp.10\)) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 322 523 151 re S
+0.95 0.96 0.98 rg 36.5 451 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 451 m 559 451 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 458 Td (#13  Authentication Request Identified) Tj ET
+0.13 0.69 0.30 rg 479 455 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 458.5 Td (LOW \(0.00\)) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 439 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 439 Td (ZAP) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 424 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 424 Td (http://localhost:4280/login.php) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 409 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 409 Td (POST) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 394 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 394 Td (The given request has been identified as an authentication request. The 'Other) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 383 Td (Info' field contains a set of key=value lines which identify any relevant fields.) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 372 Td (If the request is in a context which has an Authentication Method set to) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 361 Td ("Auto-Detect" then this rule will change the authentication to match the request) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 350 Td (identified.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 335 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 335 Td (https://www.zaproxy.org/docs/desktop/addons/authentication-helper/auth-req-id/) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 135 523 173 re S
+0.95 0.96 0.98 rg 36.5 286 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 286 m 559 286 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 293 Td (#14  Session Management Response Identified) Tj ET
+0.13 0.69 0.30 rg 479 290 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 293.5 Td (LOW \(0.00\)) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 274 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 274 Td (ZAP) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 259 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 259 Td (http://localhost:4280) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 248 Td (http://localhost:4280/login.php) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 233 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 233 Td (GET) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 222 Td (POST) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 207 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 207 Td (The given response has been identified as containing a session management token.) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 196 Td (The 'Other Info' field contains a set of header tokens that can be used in the) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 185 Td (Header Based Session Management Method. If the request is in a context which has a) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 174 Td (Session Management Method set to "Auto-Detect" then this rule will change the) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 163 Td (session management to use the tokens identified.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 148 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 148 Td (https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id/) Tj ET
+0.85 0.88 0.92 RG 0.5 w 36 36 m 559 36 l S
+BT /F1 8 Tf 0.45 0.5 0.58 rg 36 24 Td (Python Vulnerability Prioritiser Audit  |  Generated: 2026-10-26 21:00:04 EDT  |  Time taken: 69.7 s) Tj ET
+BT /F2 8 Tf 0.45 0.5 0.58 rg 504 24 Td (Page 5 of 9) Tj ET
+
+endstream
+endobj
+52 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 719.0 221.0 730.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280) >> >>
+endobj
+53 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 708.0 226.0 719.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280/) >> >>
+endobj
+54 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 697.0 271.0 708.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280/login.php) >> >>
+endobj
+55 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 686.0 316.0 697.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280/dvwa/css/login.css) >> >>
+endobj
+56 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 675.0 356.0 686.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280/dvwa/images/login_logo.png) >> >>
+endobj
+57 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 664.0 276.0 675.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280/robots.txt) >> >>
+endobj
+58 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 542.0 526.0 553.0] /Border [0 0 0] /A << /S /URI /URI (https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework) >> >>
+endobj
+59 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 531.0 511.0 542.0] /Border [0 0 0] /A << /S /URI /URI (https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework) >> >>
+endobj
+60 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 520.0 421.0 531.0] /Border [0 0 0] /A << /S /URI /URI (https://www.troyhunt.com/shhh-dont-let-your-response-headers/) >> >>
+endobj
+61 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 509.0 436.0 520.0] /Border [0 0 0] /A << /S /URI /URI (https://httpd.apache.org/docs/current/mod/core.html#servertokens) >> >>
+endobj
+62 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 498.0 516.0 509.0] /Border [0 0 0] /A << /S /URI /URI (https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552\(v=pandp.10\)) >> >>
+endobj
+63 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 422.0 271.0 433.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280/login.php) >> >>
+endobj
+64 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 333.0 506.0 344.0] /Border [0 0 0] /A << /S /URI /URI (https://www.zaproxy.org/docs/desktop/addons/authentication-helper/auth-req-id/) >> >>
+endobj
+65 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 257.0 221.0 268.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280) >> >>
+endobj
+66 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 246.0 271.0 257.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280/login.php) >> >>
+endobj
+67 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 146.0 526.0 157.0] /Border [0 0 0] /A << /S /URI /URI (https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id/) >> >>
+endobj
+68 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Annots [70 0 R 71 0 R 72 0 R 73 0 R 74 0 R 75 0 R 76 0 R 77 0 R] /Contents 69 0 R >>
+endobj
+69 0 obj
+<< /Length 5963 >>
+stream
+0.06 0.09 0.16 rg 0 792 595 50 re f
+0.25 0.45 0.85 rg 0 788 595 4 re f
+BT /F2 13 Tf 1 1 1 rg 36 812 Td (Vulnerability Assessment Prioritisation Report) Tj ET
+BT /F1 8.5 Tf 0.7 0.78 0.9 rg 36 798 Td (Total Findings: 29) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 597 523 173 re S
+0.95 0.96 0.98 rg 36.5 748 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 748 m 559 748 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 755 Td (#15  User Agent Fuzzer) Tj ET
+0.13 0.69 0.30 rg 479 752 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 755.5 Td (LOW \(0.00\)) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 736 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 736 Td (ZAP) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 721 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 721 Td (http://localhost:4280) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 710 Td (http://localhost:4280/) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 699 Td (http://localhost:4280/dvwa) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 688 Td (http://localhost:4280/dvwa/css) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 677 Td (http://localhost:4280/dvwa/images) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 662 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 662 Td (GET) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 647 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 647 Td (Check for differences in response based on fuzzed User Agent \(eg. mobile sites,) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 636 Td (access as a Search Engine Crawler\). Compares the response statuscode and the) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 625 Td (hashcode of the response body with the original response.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 610 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 610 Td (https://owasp.org/wstg) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 355 523 228 re S
+0.95 0.96 0.98 rg 36.5 561 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 561 m 559 561 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 568 Td (#16  Directory indexing found.) Tj ET
+0.39 0.45 0.55 rg 479 565 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 568.5 Td (NO SCORE) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 549 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 549 Td (Nikto) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 534 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 534 Td (127.0.0.1:80/dvwa/) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 523 Td (127.0.0.1:80/dvwa/./) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 512 Td (127.0.0.1:80/dvwa//) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 501 Td (127.0.0.1:80/dvwa/%2e/) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 490 Td (127.0.0.1:80/dvwa///) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 479 Td (127.0.0.1:80/dvwa/css/) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 468 Td (127.0.0.1:80/dvwa/includes/) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 457 Td (127.0.0.1:80/dvwa/images/) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 446 Td (127.0.0.1:80/dvwa/////////////////////////////////////////////////////////////////) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 435 Td (//////////////////////////////////////////////////////////////////////////////////) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 424 Td (//////////////////////////////////////////////////////////////////////////////////) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 413 Td (//////////////////////////) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 398 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 398 Td (GET) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 383 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 383 Td (Directory indexing found.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 368 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 368 Td (CWE-548) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 234 523 107 re S
+0.95 0.96 0.98 rg 36.5 319 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 319 m 559 319 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 326 Td (#17  OPTIONS: Allowed HTTP Methods: GET, HEAD, POST, OPTIONS .) Tj ET
+0.39 0.45 0.55 rg 479 323 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 326.5 Td (NO SCORE) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 307 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 307 Td (Nikto) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 292 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 292 Td (127.0.0.1:80/dvwa/) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 277 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 277 Td (OPTIONS) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 262 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 262 Td (OPTIONS: Allowed HTTP Methods: GET, HEAD, POST, OPTIONS .) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 247 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 247 Td (-) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 113 523 107 re S
+0.95 0.96 0.98 rg 36.5 198 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 198 m 559 198 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 205 Td (#18  RFC-1918 IP address found in the 'location' header.) Tj ET
+0.39 0.45 0.55 rg 479 202 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 205.5 Td (NO SCORE) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 186 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 186 Td (Nikto) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 171 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 171 Td (127.0.0.1:80/dvwa/images) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 156 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 156 Td (GET) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 141 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 141 Td (RFC-1918 IP address found in the 'location' header. The IP is "172.17.0.2".) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 126 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 126 Td (https://portswigger.net/kb/issues/00600300_private-ip-addresses-disclosed) Tj ET
+0.85 0.88 0.92 RG 0.5 w 36 36 m 559 36 l S
+BT /F1 8 Tf 0.45 0.5 0.58 rg 36 24 Td (Python Vulnerability Prioritiser Audit  |  Generated: 2026-10-26 21:00:04 EDT  |  Time taken: 69.7 s) Tj ET
+BT /F2 8 Tf 0.45 0.5 0.58 rg 504 24 Td (Page 6 of 9) Tj ET
+
+endstream
+endobj
+70 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 719.0 221.0 730.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280) >> >>
+endobj
+71 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 708.0 226.0 719.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280/) >> >>
+endobj
+72 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 697.0 246.0 708.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280/dvwa) >> >>
+endobj
+73 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 686.0 266.0 697.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280/dvwa/css) >> >>
+endobj
+74 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 675.0 281.0 686.0] /Border [0 0 0] /A << /S /URI /URI (http://localhost:4280/dvwa/images) >> >>
+endobj
+75 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 608.0 226.0 619.0] /Border [0 0 0] /A << /S /URI /URI (https://owasp.org/wstg) >> >>
+endobj
+76 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 366.0 151.0 377.0] /Border [0 0 0] /A << /S /URI /URI (https://cwe.mitre.org/data/definitions/548.html) >> >>
+endobj
+77 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 124.0 481.0 135.0] /Border [0 0 0] /A << /S /URI /URI (https://portswigger.net/kb/issues/00600300_private-ip-addresses-disclosed) >> >>
+endobj
+78 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Annots [80 0 R 81 0 R 82 0 R 83 0 R 84 0 R 85 0 R] /Contents 79 0 R >>
+endobj
+79 0 obj
+<< /Length 5741 >>
+stream
+0.06 0.09 0.16 rg 0 792 595 50 re f
+0.25 0.45 0.85 rg 0 788 595 4 re f
+BT /F2 13 Tf 1 1 1 rg 36 812 Td (Vulnerability Assessment Prioritisation Report) Tj ET
+BT /F1 8.5 Tf 0.7 0.78 0.9 rg 36 798 Td (Total Findings: 29) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 663 523 107 re S
+0.95 0.96 0.98 rg 36.5 748 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 748 m 559 748 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 755 Td (#19  Suggested security header missing: content-security-policy.) Tj ET
+0.39 0.45 0.55 rg 479 752 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 755.5 Td (NO SCORE) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 736 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 736 Td (Nikto) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 721 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 721 Td (127.0.0.1:80/dvwa/) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 706 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 706 Td (GET) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 691 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 691 Td (Suggested security header missing: content-security-policy.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 676 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 676 Td (https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 542 523 107 re S
+0.95 0.96 0.98 rg 36.5 627 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 627 m 559 627 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 634 Td (#20  Suggested security header missing: referrer-policy.) Tj ET
+0.39 0.45 0.55 rg 479 631 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 634.5 Td (NO SCORE) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 615 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 615 Td (Nikto) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 600 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 600 Td (127.0.0.1:80/dvwa/) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 585 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 585 Td (GET) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 570 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 570 Td (Suggested security header missing: referrer-policy.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 555 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 555 Td (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 410 523 118 re S
+0.95 0.96 0.98 rg 36.5 506 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 506 m 559 506 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 513 Td (#21  Suggested security header missing: strict-transport-secur...) Tj ET
+0.39 0.45 0.55 rg 479 510 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 513.5 Td (NO SCORE) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 494 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 494 Td (Nikto) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 479 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 479 Td (127.0.0.1:80/dvwa/) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 464 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 464 Td (GET) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 449 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 449 Td (Suggested security header missing: strict-transport-security.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 434 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 434 Td (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Securit) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 423 Td (y) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 289 523 107 re S
+0.95 0.96 0.98 rg 36.5 374 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 374 m 559 374 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 381 Td (#22  Suggested security header missing: permissions-policy.) Tj ET
+0.39 0.45 0.55 rg 479 378 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 381.5 Td (NO SCORE) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 362 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 362 Td (Nikto) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 347 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 347 Td (127.0.0.1:80/dvwa/) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 332 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 332 Td (GET) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 317 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 317 Td (Suggested security header missing: permissions-policy.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 302 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 302 Td (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 168 523 107 re S
+0.95 0.96 0.98 rg 36.5 253 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 253 m 559 253 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 260 Td (#23  Suggested security header missing: x-content-type-options.) Tj ET
+0.39 0.45 0.55 rg 479 257 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 260.5 Td (NO SCORE) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 241 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 241 Td (Nikto) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 226 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 226 Td (127.0.0.1:80/dvwa/) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 211 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 211 Td (GET) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 196 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 196 Td (Suggested security header missing: x-content-type-options.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 181 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 181 Td (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options) Tj ET
+0.85 0.88 0.92 RG 0.5 w 36 36 m 559 36 l S
+BT /F1 8 Tf 0.45 0.5 0.58 rg 36 24 Td (Python Vulnerability Prioritiser Audit  |  Generated: 2026-10-26 21:00:04 EDT  |  Time taken: 69.7 s) Tj ET
+BT /F2 8 Tf 0.45 0.5 0.58 rg 504 24 Td (Page 7 of 9) Tj ET
+
+endstream
+endobj
+80 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 674.0 381.0 685.0] /Border [0 0 0] /A << /S /URI /URI (https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) >> >>
+endobj
+81 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 553.0 481.0 564.0] /Border [0 0 0] /A << /S /URI /URI (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy) >> >>
+endobj
+82 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 432.0 526.0 443.0] /Border [0 0 0] /A << /S /URI /URI (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) >> >>
+endobj
+83 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 421.0 121.0 432.0] /Border [0 0 0] /A << /S /URI /URI (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) >> >>
+endobj
+84 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 300.0 496.0 311.0] /Border [0 0 0] /A << /S /URI /URI (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy) >> >>
+endobj
+85 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 179.0 516.0 190.0] /Border [0 0 0] /A << /S /URI /URI (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options) >> >>
+endobj
+86 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Annots [88 0 R] /Contents 87 0 R >>
+endobj
+87 0 obj
+<< /Length 5566 >>
+stream
+0.06 0.09 0.16 rg 0 792 595 50 re f
+0.25 0.45 0.85 rg 0 788 595 4 re f
+BT /F2 13 Tf 1 1 1 rg 36 812 Td (Vulnerability Assessment Prioritisation Report) Tj ET
+BT /F1 8.5 Tf 0.7 0.78 0.9 rg 36 798 Td (Total Findings: 29) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 663 523 107 re S
+0.95 0.96 0.98 rg 36.5 748 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 748 m 559 748 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 755 Td (#24  Apache/2.4.25 appears to be outdated \(current is at least...) Tj ET
+0.39 0.45 0.55 rg 479 752 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 755.5 Td (NO SCORE) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 736 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 736 Td (Nikto) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 721 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 721 Td (127.0.0.1:80/dvwa/) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 706 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 706 Td (HEAD) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 691 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 691 Td (Apache/2.4.25 appears to be outdated \(current is at least 2.4.68\).) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 676 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 676 Td (-) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 542 523 107 re S
+0.95 0.96 0.98 rg 36.5 627 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 627 m 559 627 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 634 Td (#25  Appending '/./' to a directory allows indexing.) Tj ET
+0.39 0.45 0.55 rg 479 631 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 634.5 Td (NO SCORE) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 615 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 615 Td (Nikto) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 600 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 600 Td (127.0.0.1:80/dvwa/./) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 585 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 585 Td (GET) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 570 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 570 Td (Appending '/./' to a directory allows indexing.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 555 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 555 Td (-) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 410 523 118 re S
+0.95 0.96 0.98 rg 36.5 506 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 506 m 559 506 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 513 Td (#26  Apache on Red Hat Linux release 9 reveals the root direct...) Tj ET
+0.39 0.45 0.55 rg 479 510 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 513.5 Td (NO SCORE) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 494 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 494 Td (Nikto) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 479 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 479 Td (127.0.0.1:80/dvwa//) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 464 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 464 Td (GET) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 449 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 449 Td (Apache on Red Hat Linux release 9 reveals the root directory listing by default if) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 438 Td (there is no index page.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 423 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 423 Td (-) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 289 523 107 re S
+0.95 0.96 0.98 rg 36.5 374 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 374 m 559 374 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 381 Td (#27  Weblogic allows source code or directory listing, upgrade...) Tj ET
+0.39 0.45 0.55 rg 479 378 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 381.5 Td (NO SCORE) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 362 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 362 Td (Nikto) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 347 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 347 Td (127.0.0.1:80/dvwa/%2e/) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 332 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 332 Td (GET) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 317 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 317 Td (Weblogic allows source code or directory listing, upgrade to v6.0 SP1 or higher.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 302 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 302 Td (https://web.archive.org/web/20171102042459/http://www.securityfocus.com/bid/2513) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 157 523 118 re S
+0.95 0.96 0.98 rg 36.5 253 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 253 m 559 253 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 260 Td (#28  This might be interesting.) Tj ET
+0.39 0.45 0.55 rg 479 257 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 260.5 Td (NO SCORE) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 241 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 241 Td (Nikto) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 226 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 226 Td (127.0.0.1:80/dvwa/css/) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 215 Td (127.0.0.1:80/dvwa/includes/) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 200 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 200 Td (GET) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 185 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 185 Td (This might be interesting.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 170 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 170 Td (-) Tj ET
+0.85 0.88 0.92 RG 0.5 w 36 36 m 559 36 l S
+BT /F1 8 Tf 0.45 0.5 0.58 rg 36 24 Td (Python Vulnerability Prioritiser Audit  |  Generated: 2026-10-26 21:00:04 EDT  |  Time taken: 69.7 s) Tj ET
+BT /F2 8 Tf 0.45 0.5 0.58 rg 504 24 Td (Page 8 of 9) Tj ET
+
+endstream
+endobj
+88 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 300.0 516.0 311.0] /Border [0 0 0] /A << /S /URI /URI (https://web.archive.org/web/20171102042459/http://www.securityfocus.com/bid/2513) >> >>
+endobj
+89 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Annots [91 0 R 92 0 R] /Contents 90 0 R >>
+endobj
+90 0 obj
+<< /Length 1728 >>
+stream
+0.06 0.09 0.16 rg 0 792 595 50 re f
+0.25 0.45 0.85 rg 0 788 595 4 re f
+BT /F2 13 Tf 1 1 1 rg 36 812 Td (Vulnerability Assessment Prioritisation Report) Tj ET
+BT /F1 8.5 Tf 0.7 0.78 0.9 rg 36 798 Td (Total Findings: 29) Tj ET
+0.85 0.88 0.92 RG 0.75 w 36 641 523 129 re S
+0.95 0.96 0.98 rg 36.5 748 522 21.5 re f
+0.82 0.85 0.89 RG 0.5 w 36 748 m 559 748 l S
+BT /F2 10 Tf 0.12 0.16 0.22 rg 44 755 Td (#29  The X-Content-Type-Options header is not set.) Tj ET
+0.39 0.45 0.55 rg 479 752 74 14 re f
+BT /F2 8 Tf 1 1 1 rg 485 755.5 Td (NO SCORE) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 736 Td (Scanner:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 736 Td (Nikto) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 721 Td (Site URL:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 721 Td (127.0.0.1:80/dvwa/) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 706 Td (Method:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 706 Td (GET) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 691 Td (Description:) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 691 Td (The X-Content-Type-Options header is not set. This could allow the user agent to) Tj ET
+BT /F1 8.5 Tf 0.15 0.18 0.23 rg 116 680 Td (render the content of the site in a different fashion to the MIME type.) Tj ET
+BT /F2 8.5 Tf 0.25 0.3 0.38 rg 46 665 Td (References:) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 665 Td (https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-conte) Tj ET
+BT /F1 8.5 Tf 0.12 0.38 0.82 rg 116 654 Td (nt-type-header/) Tj ET
+0.85 0.88 0.92 RG 0.5 w 36 36 m 559 36 l S
+BT /F1 8 Tf 0.45 0.5 0.58 rg 36 24 Td (Python Vulnerability Prioritiser Audit  |  Generated: 2026-10-26 21:00:04 EDT  |  Time taken: 69.7 s) Tj ET
+BT /F2 8 Tf 0.45 0.5 0.58 rg 504 24 Td (Page 9 of 9) Tj ET
+
+endstream
+endobj
+91 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 663.0 526.0 674.0] /Border [0 0 0] /A << /S /URI /URI (https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/) >> >>
+endobj
+92 0 obj
+<< /Type /Annot /Subtype /Link /Rect [116.0 652.0 191.0 663.0] /Border [0 0 0] /A << /S /URI /URI (https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/) >> >>
+endobj
+xref
+0 93
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000176 00000 n 
+0000000273 00000 n 
+0000000375 00000 n 
+0000000512 00000 n 
+0000006113 00000 n 
+0000006293 00000 n 
+0000012064 00000 n 
+0000012232 00000 n 
+0000012376 00000 n 
+0000012572 00000 n 
+0000012741 00000 n 
+0000012910 00000 n 
+0000013198 00000 n 
+0000020089 00000 n 
+0000020258 00000 n 
+0000020402 00000 n 
+0000020556 00000 n 
+0000020712 00000 n 
+0000020895 00000 n 
+0000021105 00000 n 
+0000021315 00000 n 
+0000021464 00000 n 
+0000021623 00000 n 
+0000021774 00000 n 
+0000021944 00000 n 
+0000022103 00000 n 
+0000022247 00000 n 
+0000022410 00000 n 
+0000022581 00000 n 
+0000022735 00000 n 
+0000022890 00000 n 
+0000023137 00000 n 
+0000023384 00000 n 
+0000023555 00000 n 
+0000023787 00000 n 
+0000029655 00000 n 
+0000029799 00000 n 
+0000029953 00000 n 
+0000030159 00000 n 
+0000030365 00000 n 
+0000030510 00000 n 
+0000030723 00000 n 
+0000030936 00000 n 
+0000031083 00000 n 
+0000031237 00000 n 
+0000031393 00000 n 
+0000031642 00000 n 
+0000031891 00000 n 
+0000032151 00000 n 
+0000038696 00000 n 
+0000038840 00000 n 
+0000038985 00000 n 
+0000039139 00000 n 
+0000039302 00000 n 
+0000039473 00000 n 
+0000039628 00000 n 
+0000039912 00000 n 
+0000040196 00000 n 
+0000040380 00000 n 
+0000040567 00000 n 
+0000040772 00000 n 
+0000040926 00000 n 
+0000041127 00000 n 
+0000041271 00000 n 
+0000041425 00000 n 
+0000041630 00000 n 
+0000041834 00000 n 
+0000047850 00000 n 
+0000047994 00000 n 
+0000048139 00000 n 
+0000048288 00000 n 
+0000048441 00000 n 
+0000048597 00000 n 
+0000048742 00000 n 
+0000048912 00000 n 
+0000049108 00000 n 
+0000049298 00000 n 
+0000055092 00000 n 
+0000055268 00000 n 
+0000055464 00000 n 
+0000055670 00000 n 
+0000055876 00000 n 
+0000056075 00000 n 
+0000056278 00000 n 
+0000056433 00000 n 
+0000062052 00000 n 
+0000062255 00000 n 
+0000062417 00000 n 
+0000064198 00000 n 
+0000064418 00000 n 
+trailer
+<< /Size 93 /Root 1 0 R >>
+startxref
+64638
+%%EOF
